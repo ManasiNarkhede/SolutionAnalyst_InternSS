@@ -1,4 +1,4 @@
--- Optimize Repeated Read Operations Using Views/Materialized Views
+-- Optimize Repeated Read Operations Using Views
 
 -- Create a View for Patient History
 CREATE VIEW PatientHistView AS
