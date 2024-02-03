@@ -24,6 +24,19 @@ VALUES
 ALTER TABLE Patients
 ADD COLUMN InsuranceExpiryDate DATE;
 
+-- Add InsuranceExpired column 
 ALTER TABLE Patients
-ADD COLUMN InsuranceExpired INT DEFAULT 0;  -- Flag to indicate if insurance has expired (0: Not expired, 1: Expired)
+ADD COLUMN InsuranceExpired VARCHAR(3) DEFAULT 'No';
+
+-- Update InsuranceExpiryDate for patients
+UPDATE Patients
+SET InsuranceExpiryDate = 
+    CASE
+        WHEN PatientID = 1 THEN '2024-12-31'
+        WHEN PatientID = 2 THEN '2025-06-30'
+        WHEN PatientID = 3 THEN '2023-10-15'
+        WHEN PatientID = 4 THEN '2024-08-01'
+        WHEN PatientID = 5 THEN '2025-01-20'
+    END
+WHERE PatientID IN (1, 2, 3, 4, 5);
  
