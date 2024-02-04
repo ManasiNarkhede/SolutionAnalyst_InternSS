@@ -40,3 +40,5 @@ SET InsuranceExpiryDate =
     END
 WHERE PatientID IN (1, 2, 3, 4, 5);
  
+-- Display data from the Patients table
+SELECT * FROM Patients;
