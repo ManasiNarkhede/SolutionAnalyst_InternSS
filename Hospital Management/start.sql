@@ -1,3 +1,2 @@
-CREATE DATABASE hospital;
-
+-- Creating schema
 CREATE SCHEMA hospital_management;
