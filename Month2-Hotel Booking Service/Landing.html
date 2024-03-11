@@ -1,0 +1,5245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        body {
+        margin: 0;
+        line-height: normal;
+        }
+
+        :root {
+        /* fonts */
+        --typography-desktop-caption-s: Poppins;
+
+        /* font sizes */
+        --typography-desktop-caption-s-size: 12px;
+        --typography-desktop-h6-size: 16px;
+        --typography-desktop-button-m-size: 14px;
+        --typography-desktop-button-xs-size: 10px;
+        --typography-desktop-h5-size: 20px;
+        --typography-desktop-h4-size: 24px;
+        --font-size-lgi: 19px;
+        --typography-desktop-h3-size: 32px;
+        --font-size-7xl: 26px;
+        --font-size-7xs: 6px;
+        --typography-desktop-h2-size: 40px;
+        --typography-desktop-body-l-size: 18px;
+
+        /* Colors */
+        --neutral-100: #f9f9f9;
+        --color-whitesmoke-100: #f8f8f8;
+        --neutral-200: #efefef;
+        --color-gainsboro-100: #e3e3e3;
+        --neutral-300: #d9d9d9;
+        --neutral-500: #565656;
+        --color-steelblue-100: #2e8fc4;
+        --primary-500: #07689f;
+        --neutral-white: #fff;
+        --neutral-400: #a6a6a6;
+        --neutral-black: #000;
+        --color-gray: rgba(0, 0, 0, 0.7);
+        --color-silver: #bfbfbf;
+        --primary-600: #043e5f;
+        --state-colour-error-light: #e5062e;
+        --state-colour-success: #4c9839;
+        --state-colour-success-light: #e8f5e4;
+
+        /* Gaps */
+        --gap-0: 0px;
+        --gap-22xl: 41px;
+        --gap-xl: 20px;
+        --gap-base: 16px;
+        --gap-5xl: 24px;
+        --gap-9xs: 4px;
+        --gap-41xl: 60px;
+        --gap-13xl: 32px;
+        --gap-29xl: 48px;
+        --gap-lg: 18px;
+        --gap-21xl: 40px;
+        --gap-5xs: 8px;
+        --gap-sm: 14px;
+        --gap-3xs: 10px;
+
+        /* Paddings */
+        --padding-7xs: 6px;
+        --padding-lgi: 19px;
+        --padding-xl: 20px;
+        --padding-4xl: 23px;
+        --padding-12xs: 1px;
+        --padding-10xs: 3px;
+        --padding-29xl: 48px;
+        --padding-3xl: 22px;
+        --padding-12xl: 31px;
+        --padding-5xs: 8px;
+        --padding-2xs: 11px;
+        --padding-9xs: 4px;
+        --padding-xs: 12px;
+        --padding-mini: 15px;
+        --padding-base: 16px;
+        --padding-mid: 17px;
+        --padding-sm: 14px;
+        --padding-5xl: 24px;
+        --padding-89xl: 108px;
+        --padding-35xl: 54px;
+        --padding-41xl: 60px;
+        --padding-6xl: 25px;
+        --padding-20xl: 39px;
+        --padding-13xl: 32px;
+        --padding-11xs: 2px;
+        --padding-4xs: 9px;
+        --padding-19xl: 38px;
+        --padding-6xs: 7px;
+        --padding-3xs: 10px;
+        --padding-2xl: 21px;
+        --padding-11xs-5: 1.5px;
+
+        /* Border radiuses */
+        --br-5xs: 8px;
+        --br-9xs: 4px;
+        --br-7xs: 6px;
+        --br-281xl: 300px;
+        --br-11xs: 2px;
+        --br-11xl: 30px;
+        --br-31xl: 50px;
+        --br-xl: 20px;
+        --br-81xl: 100px;
+        --br-13xl: 32px;
+        }
+
+                .customer-service-link {
+        width: 46px;
+        height: 44px;
+        position: relative;
+        }
+        .easyset-24 {
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        white-space: nowrap;
+        }
+        .logo {
+        width: 91px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        }
+        .iconsbasesearch {
+        height: 24px;
+        width: 24px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        }
+        .search-input-in-footer {
+        width: 600px;
+        border-radius: var(--br-9xs);
+        background-color: var(--neutral-white);
+        border: 1px solid var(--neutral-300);
+        box-sizing: border-box;
+        overflow: hidden;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        padding: var(--padding-5xs) var(--padding-base);
+        max-width: 100%;
+        }
+        .button-icon {
+        height: 20px;
+        width: 20px;
+        border-radius: var(--br-xl);
+        object-fit: contain;
+        }
+        .button-icon,
+        .england,
+        .iconsmoneydollar {
+        overflow: hidden;
+        flex-shrink: 0;
+        }
+        .england {
+        height: 40px;
+        width: 40px;
+        border-radius: var(--br-9xs);
+        background-color: var(--neutral-100);
+        border: 2px solid var(--neutral-100);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: var(--padding-11xs);
+        }
+        .iconsmoneydollar {
+        height: 20px;
+        width: 20px;
+        position: relative;
+        }
+        .button,
+        .icon-buttons {
+        background-color: var(--neutral-100);
+        display: flex;
+        flex-direction: row;
+        }
+        .button {
+        height: 40px;
+        border-radius: var(--br-9xs);
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        padding: var(--padding-5xs) var(--padding-3xs);
+        box-sizing: border-box;
+        }
+        .icon-buttons {
+        align-items: flex-start;
+        justify-content: flex-start;
+        }
+        .iconscharacterhelp {
+        height: 20px;
+        width: 20px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        }
+        .button1,
+        .icon-buttons1 {
+        background-color: var(--neutral-100);
+        display: flex;
+        flex-direction: row;
+        }
+        .button1 {
+        height: 40px;
+        border-radius: var(--br-9xs);
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        padding: var(--padding-5xs) var(--padding-3xs);
+        box-sizing: border-box;
+        }
+        .icon-buttons1 {
+        align-items: flex-start;
+        justify-content: flex-start;
+        }
+        .iconsbaselike {
+        height: 20px;
+        width: 20px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        }
+        .button2,
+        .icon-buttons2 {
+        display: flex;
+        flex-direction: row;
+        }
+        .button2 {
+        height: 40px;
+        border-radius: var(--br-9xs);
+        background-color: var(--neutral-100);
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        padding: var(--padding-5xs) var(--padding-3xs);
+        box-sizing: border-box;
+        }
+        .icon-buttons2 {
+        align-items: flex-start;
+        justify-content: flex-start;
+        }
+        .iconscommunicatephone-call {
+        height: 24px;
+        width: 24px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        }
+        .icons1,
+        .phone {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        }
+        .phone {
+        width: 40px;
+        border-radius: var(--br-9xs);
+        background-color: var(--neutral-100);
+        overflow: hidden;
+        flex-shrink: 0;
+        justify-content: center;
+        padding: var(--padding-5xs) var(--padding-9xs);
+        box-sizing: border-box;
+        }
+        .icons1 {
+        justify-content: flex-end;
+        gap: 0 8px;
+        }
+        .photo-icon {
+        height: 40px;
+        width: 40px;
+        position: relative;
+        border-radius: var(--br-31xl);
+        overflow: hidden;
+        flex-shrink: 0;
+        object-fit: cover;
+        }
+        .anna-carinna,
+        .your-account {
+        position: relative;
+        line-height: 140%;
+        white-space: nowrap;
+        }
+        .your-account {
+        font-weight: 800;
+        }
+        .anna-carinna {
+        width: 100%;
+        display: inline-block;
+        max-width: 96px;
+        }
+        .anna,
+        .anna1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        }
+        .anna1 {
+        align-self: stretch;
+        align-items: flex-start;
+        min-width: 24px;
+        margin-top: -4px;
+        font-size: var(--typography-desktop-caption-s-size);
+        color: var(--primary-500);
+        }
+        .anna {
+        flex: 1;
+        background-color: var(--neutral-100);
+        align-items: center;
+        }
+        .anna-name,
+        .icons,
+        .search {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        }
+        .anna-name {
+        width: 144px;
+        justify-content: flex-start;
+        gap: 0 8px;
+        }
+        .icons,
+        .search {
+        max-width: 100%;
+        }
+        .icons {
+        justify-content: center;
+        gap: 0 16px;
+        font-size: var(--typography-desktop-button-m-size);
+        color: var(--primary-600);
+        }
+        .search {
+        justify-content: flex-start;
+        gap: 0 70px;
+        }
+        .link-button {
+        flex: 1;
+        position: relative;
+        font-size: var(--typography-desktop-h6-size);
+        line-height: 140%;
+        text-transform: capitalize;
+        font-weight: 500;
+        font-family: var(--typography-desktop-caption-s);
+        color: var(--neutral-400);
+        text-align: center;
+        }
+        .auto-layout-icon,
+        .chips-trip {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        }
+        .auto-layout-icon {
+        width: 71px;
+        padding: 0 var(--padding-xl);
+        box-sizing: border-box;
+        }
+        .chips-trip {
+        cursor: pointer;
+        border: 1px solid var(--neutral-400);
+        padding: var(--padding-5xs) var(--padding-base);
+        background-color: var(--neutral-white);
+        align-self: stretch;
+        flex: 1;
+        border-radius: var(--br-11xl);
+        overflow: hidden;
+        }
+        .text {
+        flex: 1;
+        position: relative;
+        font-size: var(--typography-desktop-h6-size);
+        line-height: 140%;
+        text-transform: capitalize;
+        font-weight: 500;
+        font-family: var(--typography-desktop-caption-s);
+        color: var(--neutral-400);
+        text-align: center;
+        }
+        .chips-deals,
+        .div {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0 var(--padding-sm);
+        }
+        .chips-deals {
+        cursor: pointer;
+        border: 1px solid var(--neutral-400);
+        padding: var(--padding-5xs) var(--padding-base);
+        background-color: var(--neutral-white);
+        align-self: stretch;
+        border-radius: var(--br-11xl);
+        overflow: hidden;
+        }
+        .text1 {
+        flex: 1;
+        position: relative;
+        font-size: var(--typography-desktop-h6-size);
+        line-height: 140%;
+        text-transform: capitalize;
+        font-family: var(--typography-desktop-caption-s);
+        color: var(--neutral-white);
+        text-align: center;
+        }
+        .chips-hotel,
+        .div1 {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0 var(--padding-4xl);
+        }
+        .chips-hotel {
+        cursor: pointer;
+        border: 0;
+        padding: var(--padding-5xs) var(--padding-base);
+        background-color: var(--primary-500);
+        align-self: stretch;
+        border-radius: var(--br-11xl);
+        overflow: hidden;
+        }
+        .text2 {
+        flex: 1;
+        position: relative;
+        font-size: var(--typography-desktop-h6-size);
+        line-height: 140%;
+        text-transform: capitalize;
+        font-weight: 500;
+        font-family: var(--typography-desktop-caption-s);
+        color: var(--neutral-400);
+        text-align: center;
+        }
+        .chips-flight,
+        .div2 {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0 var(--padding-2xl);
+        }
+        .chips-flight {
+        cursor: pointer;
+        border: 1px solid var(--neutral-400);
+        padding: var(--padding-5xs) var(--padding-base);
+        background-color: var(--neutral-white);
+        align-self: stretch;
+        border-radius: var(--br-11xl);
+        overflow: hidden;
+        }
+        .text3 {
+        flex: 1;
+        position: relative;
+        font-size: var(--typography-desktop-h6-size);
+        line-height: 140%;
+        text-transform: capitalize;
+        font-weight: 500;
+        font-family: var(--typography-desktop-caption-s);
+        color: var(--neutral-400);
+        text-align: center;
+        }
+        .chips-apartment,
+        .div3 {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        }
+        .chips-apartment {
+        cursor: pointer;
+        border: 1px solid var(--neutral-400);
+        padding: var(--padding-5xs) var(--padding-base);
+        background-color: var(--neutral-white);
+        align-self: stretch;
+        border-radius: var(--br-11xl);
+        overflow: hidden;
+        }
+        .text4 {
+        flex: 1;
+        position: relative;
+        font-size: var(--typography-desktop-h6-size);
+        line-height: 140%;
+        text-transform: capitalize;
+        font-weight: 500;
+        font-family: var(--typography-desktop-caption-s);
+        color: var(--neutral-400);
+        text-align: center;
+        }
+        .chips-camper,
+        .div4 {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0 var(--padding-3xs);
+        }
+        .chips-camper {
+        cursor: pointer;
+        border: 1px solid var(--neutral-400);
+        padding: var(--padding-5xs) var(--padding-base);
+        background-color: var(--neutral-white);
+        align-self: stretch;
+        border-radius: var(--br-11xl);
+        overflow: hidden;
+        }
+        .chip-menu,
+        .header1 {
+        display: flex;
+        align-items: center;
+        max-width: 100%;
+        }
+        .chip-menu {
+        width: 808px;
+        height: 40px;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0 16px;
+        }
+        .header1 {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 0 0.5px;
+        box-sizing: border-box;
+        gap: 40px 0;
+        }
+        .header-after-sign-in,
+        .hotel-search-header-withe-sea {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        max-width: 100%;
+        }
+        .header-after-sign-in {
+        align-self: stretch;
+        flex: 1;
+        background-color: var(--neutral-100);
+        overflow: hidden;
+        justify-content: center;
+        padding: var(--padding-5xl) var(--padding-xl);
+        box-sizing: border-box;
+        }
+        .hotel-search-header-withe-sea {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 363px;
+        justify-content: flex-start;
+        text-align: left;
+        font-size: var(--typography-desktop-h6-size);
+        color: var(--primary-500);
+        font-family: var(--typography-desktop-caption-s);
+        }
+        .find-exclusive-genius,
+        .heading {
+        position: relative;
+        text-transform: capitalize;
+        }
+        .heading {
+        margin: 0;
+        align-self: stretch;
+        font-size: inherit;
+        line-height: 140%;
+        font-weight: 700;
+        font-family: inherit;
+        }
+        .find-exclusive-genius {
+        font-size: var(--typography-desktop-button-m-size);
+        line-height: 150%;
+        display: inline-block;
+        max-width: 100%;
+        }
+        .text5 {
+        width: 581px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0 var(--padding-xl) 0 0;
+        box-sizing: border-box;
+        gap: 4px 0;
+        max-width: 100%;
+        }
+        .place {
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        }
+        .text6 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: var(--padding-9xs) var(--padding-5xs);
+        }
+        .iconsbuildhotel {
+        height: 24px;
+        width: 24px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        min-height: 24px;
+        }
+        .text8 {
+        width: calc(100% - 24px);
+        border: 0;
+        outline: 0;
+        background-color: transparent;
+        height: 21px;
+        flex: 1;
+        justify-content: flex-start;
+        font-family: var(--typography-desktop-caption-s);
+        font-size: var(--typography-desktop-button-m-size);
+        color: var(--neutral-black);
+        min-width: 120px;
+        }
+        .input1,
+        .text7,
+        .text8 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        }
+        .text7 {
+        flex: 1;
+        justify-content: center;
+        gap: 0 8px;
+        }
+        .input1 {
+        align-self: stretch;
+        background-color: var(--neutral-white);
+        border: 2px solid var(--neutral-300);
+        justify-content: flex-start;
+        padding: var(--padding-base) var(--padding-sm);
+        }
+        .information {
+        height: 14px;
+        flex: 1;
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        font-weight: 500;
+        display: inline-block;
+        }
+        .input,
+        .text9 {
+        justify-content: center;
+        }
+        .text9 {
+        width: 76px;
+        display: none;
+        flex-direction: row;
+        align-items: center;
+        padding: var(--padding-9xs) var(--padding-5xs);
+        box-sizing: border-box;
+        font-size: var(--typography-desktop-button-xs-size);
+        color: var(--neutral-500);
+        }
+        .input {
+        width: 264px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        }
+        .vip {
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        }
+        .text10 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: var(--padding-9xs) var(--padding-5xs);
+        }
+        .iconstravelstake-off {
+        height: 24px;
+        width: 24px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        display: none;
+        }
+        .long-lasting {
+        flex: 1;
+        position: relative;
+        line-height: 150%;
+        text-transform: capitalize;
+        }
+        .text11 {
+        width: 119px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0 16px;
+        }
+        .iconseditdrop-down-list {
+        height: 24px;
+        width: 24px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        min-height: 24px;
+        }
+        .input3 {
+        align-self: stretch;
+        background-color: var(--neutral-white);
+        border: 2px solid var(--neutral-300);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: var(--padding-base) var(--padding-sm);
+        gap: var(--gap-0);
+        row-gap: 20px;
+        }
+        .input2 {
+        width: 175px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        min-width: 114px;
+        }
+        .passengers-room {
+        width: 234px;
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        display: inline-block;
+        box-sizing: border-box;
+        padding-right: var(--padding-xl);
+        }
+        .text12 {
+        align-self: stretch;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: var(--padding-9xs) var(--padding-5xs);
+        }
+        .iconspeoplespeople {
+        height: 24px;
+        width: 24px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        min-height: 24px;
+        }
+        .adults-3 {
+        position: relative;
+        line-height: 150%;
+        text-transform: capitalize;
+        }
+        .text13 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 var(--padding-13xl) 0 0;
+        gap: 0 8px;
+        }
+        .two-rooms {
+        position: relative;
+        line-height: 150%;
+        text-transform: capitalize;
+        }
+        .iconseditdrop-down-list1 {
+        height: 24px;
+        width: 24px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        min-height: 24px;
+        }
+        .input5,
+        .text14 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        }
+        .text14 {
+        justify-content: flex-end;
+        gap: 0 8px;
+        }
+        .input5 {
+        align-self: stretch;
+        background-color: var(--neutral-white);
+        border: 2px solid var(--neutral-300);
+        justify-content: space-between;
+        padding: var(--padding-base) var(--padding-sm);
+        gap: var(--gap-0);
+        row-gap: 20px;
+        }
+        .information1 {
+        height: 14px;
+        flex: 1;
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        font-weight: 500;
+        display: inline-block;
+        }
+        .input4,
+        .text15 {
+        justify-content: center;
+        }
+        .text15 {
+        width: 76px;
+        display: none;
+        flex-direction: row;
+        align-items: center;
+        padding: var(--padding-9xs) var(--padding-5xs);
+        box-sizing: border-box;
+        font-size: var(--typography-desktop-button-xs-size);
+        color: var(--neutral-500);
+        }
+        .input4 {
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 100%;
+        }
+        .check-in-check {
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        white-space: pre-wrap;
+        }
+        .text16 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: var(--padding-9xs) var(--padding-5xs);
+        }
+        .iconseditcalendar {
+        height: 24px;
+        width: 24px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        min-height: 24px;
+        }
+        .dec-2023- {
+        position: relative;
+        font-size: var(--typography-desktop-button-m-size);
+        line-height: 150%;
+        text-transform: capitalize;
+        font-family: var(--typography-desktop-caption-s);
+        color: var(--neutral-black);
+        white-space: pre-wrap;
+        text-align: left;
+        }
+        .text17 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0 8px;
+        }
+        .iconstravelslanding {
+        height: 24px;
+        width: 24px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        display: none;
+        min-height: 24px;
+        }
+        .input7 {
+        cursor: pointer;
+        border: 2px solid var(--neutral-300);
+        padding: var(--padding-base) var(--padding-sm);
+        background-color: var(--neutral-white);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0 32px;
+        }
+        .information2 {
+        height: 14px;
+        flex: 1;
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        font-weight: 500;
+        display: inline-block;
+        }
+        .input6,
+        .text18 {
+        justify-content: center;
+        }
+        .text18 {
+        width: 76px;
+        display: none;
+        flex-direction: row;
+        align-items: center;
+        padding: var(--padding-9xs) var(--padding-5xs);
+        box-sizing: border-box;
+        font-size: var(--typography-desktop-button-xs-size);
+        color: var(--neutral-500);
+        }
+        .input6 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        }
+        .search3 {
+        width: 130px;
+        position: relative;
+        font-size: var(--typography-desktop-h6-size);
+        line-height: 140%;
+        text-transform: capitalize;
+        display: inline-block;
+        font-family: var(--typography-desktop-caption-s);
+        color: var(--neutral-white);
+        text-align: center;
+        flex-shrink: 0;
+        box-sizing: border-box;
+        padding-left: var(--padding-xl);
+        padding-right: var(--padding-xl);
+        }
+        .hotel-search-menue-bar,
+        .search2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        }
+        .search2 {
+        cursor: pointer;
+        border: 2px solid var(--primary-500);
+        padding: var(--padding-3xs);
+        background-color: var(--primary-500);
+        height: 56px;
+        width: 182px;
+        border-radius: 0 var(--br-9xs) var(--br-9xs) 0;
+        box-sizing: border-box;
+        align-items: center;
+        white-space: nowrap;
+        }
+        .search2:hover {
+        background-color: var(--color-steelblue-100);
+        border: 2px solid var(--color-steelblue-100);
+        box-sizing: border-box;
+        }
+        .hotel-search-menue-bar {
+        align-self: stretch;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        row-gap: 20px;
+        max-width: 100%;
+        font-size: var(--typography-desktop-button-m-size);
+        color: var(--neutral-black);
+        }
+        .search1 {
+        position: absolute;
+        top: 210px;
+        left: 108px;
+        width: 1224px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 40px 0;
+        max-width: 100%;
+        z-index: 1;
+        }
+        .hotel-search-menue {
+        height: 393px;
+        flex: 1;
+        position: relative;
+        max-width: 100%;
+        }
+        .header {
+        align-self: stretch;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0 0 var(--padding-29xl);
+        box-sizing: border-box;
+        max-width: 100%;
+        text-align: left;
+        font-size: var(--typography-desktop-h4-size);
+        color: var(--primary-500);
+        font-family: var(--typography-desktop-caption-s);
+        }
+        .why-choose-us1 {
+        margin: 0;
+        align-self: stretch;
+        position: relative;
+        font-size: inherit;
+        line-height: 140%;
+        font-weight: 700;
+        font-family: inherit;
+        }
+        .iconsarrowsright {
+        height: 16px;
+        width: 16px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        display: none;
+        }
+        .barcode-app-stores {
+        flex: 1;
+        position: relative;
+        font-size: var(--typography-desktop-h6-size);
+        line-height: 140%;
+        text-transform: capitalize;
+        font-weight: 500;
+        font-family: var(--typography-desktop-caption-s);
+        color: var(--neutral-white);
+        text-align: center;
+        }
+        .iconsarrowsright-small {
+        height: 16px;
+        width: 16px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        }
+        .text19 {
+        flex: 1;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0 var(--padding-xl);
+        gap: 0 8px;
+        }
+        .button3,
+        .text19,
+        .why-choose-us {
+        display: flex;
+        align-items: center;
+        }
+        .button3 {
+        cursor: pointer;
+        border: 0;
+        padding: var(--padding-5xs) var(--padding-base);
+        background-color: var(--primary-500);
+        width: 200px;
+        height: 32px;
+        border-radius: var(--br-9xs);
+        overflow: hidden;
+        flex-shrink: 0;
+        flex-direction: row;
+        justify-content: center;
+        box-sizing: border-box;
+        gap: 0 16px;
+        }
+        .why-choose-us {
+        width: 352px;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 16px 0;
+        max-width: 100%;
+        }
+        .auto-layout {
+        width: 1220px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        max-width: 100%;
+        }
+        .exclusive-hotel-search {
+        margin: 0;
+        width: 733px;
+        position: relative;
+        font-size: inherit;
+        line-height: 120%;
+        font-weight: 300;
+        font-family: inherit;
+        display: inline-block;
+        flex-shrink: 0;
+        max-width: 100%;
+        }
+        .exclusive-hotel-search-wrapper {
+        align-self: stretch;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0 var(--padding-xl) 0 var(--padding-6xl);
+        box-sizing: border-box;
+        max-width: 100%;
+        }
+        .place-rules {
+        flex: 1;
+        position: relative;
+        font-size: var(--typography-desktop-h4-size);
+        line-height: 140%;
+        text-transform: capitalize;
+        font-family: var(--typography-desktop-caption-s);
+        color: var(--primary-500);
+        text-align: center;
+        }
+        .tab-review,
+        .text21 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        }
+        .text21 {
+        flex: 1;
+        }
+        .tab-review {
+        cursor: pointer;
+        border: 0;
+        padding: var(--padding-5xs) var(--padding-base);
+        background-color: var(--neutral-white);
+        height: 64px;
+        width: 250px;
+        border-radius: var(--br-9xs) var(--br-9xs) 0 0;
+        overflow: hidden;
+        flex-shrink: 0;
+        box-sizing: border-box;
+        }
+        .last-search {
+        flex: 1;
+        position: relative;
+        font-size: var(--typography-desktop-h6-size);
+        line-height: 140%;
+        text-transform: capitalize;
+        font-family: var(--typography-desktop-caption-s);
+        color: var(--primary-500);
+        text-align: center;
+        }
+        .tab-review1 {
+        cursor: pointer;
+        border: 0;
+        padding: var(--padding-base);
+        background-color: var(--neutral-300);
+        height: 48px;
+        width: 240px;
+        border-radius: var(--br-9xs) var(--br-9xs) 0 0;
+        overflow: hidden;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        white-space: nowrap;
+        }
+        .tab-review1:hover,
+        .tab-review2:hover,
+        .tab-review3:hover,
+        .tab-review4:hover {
+        background-color: var(--color-silver);
+        }
+        .trending-destinations {
+        flex: 1;
+        position: relative;
+        font-size: var(--typography-desktop-h6-size);
+        line-height: 140%;
+        text-transform: capitalize;
+        font-family: var(--typography-desktop-caption-s);
+        color: var(--primary-500);
+        text-align: center;
+        }
+        .tab-review2 {
+        cursor: pointer;
+        border: 0;
+        padding: var(--padding-base);
+        background-color: var(--neutral-300);
+        height: 48px;
+        width: 240px;
+        border-radius: var(--br-9xs) var(--br-9xs) 0 0;
+        overflow: hidden;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        white-space: nowrap;
+        }
+        .highest-reviewed {
+        flex: 1;
+        position: relative;
+        font-size: var(--typography-desktop-h6-size);
+        line-height: 140%;
+        text-transform: capitalize;
+        font-family: var(--typography-desktop-caption-s);
+        color: var(--primary-500);
+        text-align: center;
+        }
+        .tab-review3 {
+        cursor: pointer;
+        border: 0;
+        padding: var(--padding-base);
+        background-color: var(--neutral-300);
+        height: 48px;
+        width: 240px;
+        border-radius: var(--br-9xs) var(--br-9xs) 0 0;
+        overflow: hidden;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        white-space: nowrap;
+        }
+        .highest-reviewed1 {
+        flex: 1;
+        position: relative;
+        font-size: var(--typography-desktop-h6-size);
+        line-height: 140%;
+        text-transform: capitalize;
+        font-family: var(--typography-desktop-caption-s);
+        color: var(--primary-500);
+        text-align: center;
+        }
+        .tab-review4,
+        .tabs {
+        display: flex;
+        flex-direction: row;
+        }
+        .tab-review4 {
+        cursor: pointer;
+        border: 0;
+        padding: var(--padding-base);
+        background-color: var(--neutral-300);
+        height: 48px;
+        width: 240px;
+        border-radius: var(--br-9xs) var(--br-9xs) 0 0;
+        overflow: hidden;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        white-space: nowrap;
+        }
+        .tabs {
+        align-self: stretch;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 3.5px;
+        }
+        .banner-hotel-search,
+        .text20 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        max-width: 100%;
+        }
+        .text20 {
+        width: 1224px;
+        align-items: flex-start;
+        gap: 36px 0;
+        font-size: 64px;
+        color: var(--neutral-100);
+        }
+        .banner-hotel-search {
+        align-self: stretch;
+        overflow: hidden;
+        align-items: center;
+        padding: 128px var(--padding-5xl) 0 var(--padding-xl);
+        box-sizing: border-box;
+        gap: 255px 0;
+        background-image: url(./public/banner-hotel-search@3x.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        flex-shrink: 0;
+        text-align: left;
+        font-size: var(--typography-desktop-h2-size);
+        color: var(--neutral-black);
+        font-family: var(--typography-desktop-caption-s);
+        }
+        .customer-service-icon {
+        width: 6.4px;
+        height: 8.7px;
+        position: absolute;
+        margin: 0 !important;
+        bottom: -1.2px;
+        left: -1px;
+        object-fit: contain;
+        }
+        .headquarters-icon,
+        .subtract-icon {
+        width: 10px;
+        height: 6px;
+        position: relative;
+        }
+        .subtract-icon {
+        width: 55px;
+        height: 55px;
+        z-index: 1;
+        margin-top: -6px;
+        }
+        .special-offer {
+        width: 34px;
+        position: absolute;
+        margin: 0 !important;
+        top: 32.57px;
+        left: 2px;
+        line-height: 150%;
+        text-transform: capitalize;
+        white-space: pre-wrap;
+        display: inline-block;
+        transform: rotate(-44.83deg);
+        transform-origin: 0 0;
+        z-index: 2;
+        }
+        .tag {
+        margin-top: -6px;
+        margin-left: -5px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding: 0 0 var(--padding-12xs);
+        position: relative;
+        z-index: 1;
+        }
+        .image-1-icon {
+        height: 124px;
+        width: 125px;
+        position: relative;
+        border-radius: var(--br-11xs) 0 0 var(--br-11xs);
+        object-fit: cover;
+        }
+        .berlin,
+        .wed-25-jan-fri {
+        align-self: stretch;
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        }
+        .wed-25-jan-fri {
+        font-size: var(--typography-desktop-button-xs-size);
+        font-weight: 300;
+        }
+        .text22 {
+        align-self: stretch;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px 0;
+        }
+        .special-flight-offers,
+        .text-berlin,
+        .text22 {
+        display: flex;
+        justify-content: flex-start;
+        }
+        .text-berlin {
+        flex: 1;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: var(--padding-xl) 0;
+        box-sizing: border-box;
+        min-width: 81px;
+        }
+        .special-flight-offers {
+        margin-left: -1px;
+        align-self: stretch;
+        border-radius: var(--br-9xs);
+        background-color: var(--neutral-white);
+        border: 1px solid var(--color-gainsboro-100);
+        flex-direction: row;
+        align-items: center;
+        padding: var(--padding-5xs) var(--padding-6xs);
+        gap: 0 8px;
+        margin-top: -50px;
+        font-size: var(--typography-desktop-h6-size);
+        color: var(--neutral-black);
+        }
+        .search-bar,
+        .special-offer-hotels,
+        .special-offer-hotels1 {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        }
+        .special-offer-hotels1 {
+        height: 140px;
+        flex: 1;
+        flex-direction: column;
+        }
+        .search-bar,
+        .special-offer-hotels {
+        width: 273px;
+        flex-direction: row;
+        }
+        .search-bar {
+        width: 639px;
+        justify-content: center;
+        padding: 0 var(--padding-xl);
+        box-sizing: border-box;
+        max-width: 100%;
+        }
+        .buttonconfirm-icon {
+        width: 6.4px;
+        height: 8.7px;
+        position: absolute;
+        margin: 0 !important;
+        bottom: -1.2px;
+        left: -1px;
+        object-fit: contain;
+        }
+        .frame-footer-icon,
+        .subtract-icon1 {
+        width: 10px;
+        height: 6px;
+        position: relative;
+        }
+        .subtract-icon1 {
+        width: 55px;
+        height: 55px;
+        z-index: 1;
+        margin-top: -6px;
+        }
+        .special-offer1 {
+        width: 34px;
+        position: absolute;
+        margin: 0 !important;
+        top: 32.57px;
+        left: 2px;
+        line-height: 150%;
+        text-transform: capitalize;
+        white-space: pre-wrap;
+        display: inline-block;
+        transform: rotate(-44.83deg);
+        transform-origin: 0 0;
+        z-index: 2;
+        }
+        .tag1 {
+        margin-top: -6px;
+        margin-left: -5px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding: 0 0 var(--padding-12xs);
+        position: relative;
+        z-index: 1;
+        }
+        .image-1-icon1 {
+        height: 124px;
+        width: 125px;
+        position: relative;
+        border-radius: var(--br-11xs) 0 0 var(--br-11xs);
+        object-fit: cover;
+        }
+        .berlin1,
+        .wed-25-jan-fri1 {
+        align-self: stretch;
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        }
+        .wed-25-jan-fri1 {
+        font-size: var(--typography-desktop-button-xs-size);
+        font-weight: 300;
+        }
+        .text23 {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 4px 0;
+        }
+        .special-flight-offers1,
+        .text-berlin1 {
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+        }
+        .text-berlin1 {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: var(--padding-xl) 0;
+        box-sizing: border-box;
+        min-width: 81px;
+        }
+        .special-flight-offers1 {
+        border-radius: var(--br-9xs);
+        background-color: var(--neutral-white);
+        border: 1px solid var(--color-gainsboro-100);
+        flex-direction: row;
+        align-items: center;
+        padding: var(--padding-5xs) var(--padding-6xs);
+        gap: 0 8px;
+        margin-left: -51px;
+        font-size: var(--typography-desktop-h6-size);
+        color: var(--neutral-black);
+        }
+        .special-offer-hotels3 {
+        width: 273px;
+        flex-direction: row;
+        }
+        .service,
+        .special-offer-hotels2,
+        .special-offer-hotels3 {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        }
+        .special-offer-hotels2 {
+        align-self: stretch;
+        flex-direction: row;
+        }
+        .service {
+        width: 273px;
+        flex-direction: column;
+        padding: 66px 0 0;
+        box-sizing: border-box;
+        }
+        .balitravelguide-icon {
+        width: 6.4px;
+        height: 8.7px;
+        position: absolute;
+        margin: 0 !important;
+        bottom: -1.2px;
+        left: -1px;
+        object-fit: contain;
+        }
+        .auto-layout-activities,
+        .subtract-icon2 {
+        width: 10px;
+        height: 6px;
+        position: relative;
+        }
+        .subtract-icon2 {
+        width: 55px;
+        height: 55px;
+        z-index: 1;
+        margin-top: -6px;
+        }
+        .special-offer2 {
+        width: 31px;
+        position: absolute;
+        margin: 0 !important;
+        top: 30.46px;
+        left: 2px;
+        line-height: 150%;
+        text-transform: capitalize;
+        display: inline-block;
+        transform: rotate(-44.83deg);
+        transform-origin: 0 0;
+        z-index: 2;
+        }
+        .tag2 {
+        margin-top: -6px;
+        margin-left: -5px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding: 0 0 var(--padding-12xs);
+        position: relative;
+        z-index: 1;
+        }
+        .image-1-icon2 {
+        height: 124px;
+        width: 125px;
+        position: relative;
+        border-radius: var(--br-11xs) 0 0 var(--br-11xs);
+        object-fit: cover;
+        }
+        .berlin2,
+        .wed-25-jan-fri2 {
+        align-self: stretch;
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        }
+        .wed-25-jan-fri2 {
+        font-size: var(--typography-desktop-button-xs-size);
+        font-weight: 300;
+        }
+        .text24 {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 4px 0;
+        }
+        .special-flight-offers2,
+        .text-berlin2 {
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+        }
+        .text-berlin2 {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: var(--padding-xl) 0;
+        box-sizing: border-box;
+        min-width: 81px;
+        }
+        .special-flight-offers2 {
+        border-radius: var(--br-9xs);
+        background-color: var(--neutral-white);
+        border: 1px solid var(--color-gainsboro-100);
+        flex-direction: row;
+        align-items: center;
+        padding: var(--padding-5xs) var(--padding-6xs);
+        gap: 0 8px;
+        margin-left: -51px;
+        font-size: var(--typography-desktop-h6-size);
+        color: var(--neutral-black);
+        }
+        .special-offer-hotels5 {
+        width: 273px;
+        display: flex;
+        align-items: flex-start;
+        }
+        .special-offer-hotels4,
+        .special-offer-hotels5 {
+        flex-direction: row;
+        justify-content: flex-start;
+        }
+        .askonline,
+        .navbar,
+        .special-offer-hotels4 {
+        display: flex;
+        align-items: flex-start;
+        }
+        .askonline {
+        align-self: stretch;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: var(--gap-xl);
+        }
+        .navbar {
+        width: 679px;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 46px 0;
+        min-width: 679px;
+        max-width: 100%;
+        }
+        .network-links-icon {
+        width: 6.4px;
+        height: 8.7px;
+        position: absolute;
+        margin: 0 !important;
+        bottom: -1.2px;
+        left: -1px;
+        object-fit: contain;
+        }
+        .email-info-icon,
+        .subtract-icon3 {
+        width: 10px;
+        height: 6px;
+        position: relative;
+        }
+        .subtract-icon3 {
+        width: 55px;
+        height: 55px;
+        z-index: 1;
+        margin-top: -6px;
+        }
+        .special-offer3 {
+        width: 34px;
+        position: absolute;
+        margin: 0 !important;
+        top: 32.57px;
+        left: 2px;
+        line-height: 150%;
+        text-transform: capitalize;
+        white-space: pre-wrap;
+        display: inline-block;
+        transform: rotate(-44.83deg);
+        transform-origin: 0 0;
+        z-index: 2;
+        }
+        .tag3 {
+        margin-top: -6px;
+        margin-left: -5px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding: 0 0 var(--padding-12xs);
+        position: relative;
+        z-index: 1;
+        }
+        .image-1-icon3 {
+        height: 124px;
+        width: 125px;
+        position: relative;
+        border-radius: var(--br-11xs) 0 0 var(--br-11xs);
+        object-fit: cover;
+        }
+        .berlin3,
+        .wed-25-jan-fri3 {
+        align-self: stretch;
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        }
+        .wed-25-jan-fri3 {
+        font-size: var(--typography-desktop-button-xs-size);
+        font-weight: 300;
+        }
+        .text25 {
+        align-self: stretch;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px 0;
+        }
+        .special-flight-offers3,
+        .text-berlin3,
+        .text25 {
+        display: flex;
+        justify-content: flex-start;
+        }
+        .text-berlin3 {
+        flex: 1;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: var(--padding-xl) 0;
+        box-sizing: border-box;
+        min-width: 81px;
+        }
+        .special-flight-offers3 {
+        margin-left: -1px;
+        align-self: stretch;
+        border-radius: var(--br-9xs);
+        background-color: var(--neutral-white);
+        border: 1px solid var(--color-gainsboro-100);
+        flex-direction: row;
+        align-items: center;
+        padding: var(--padding-5xs) var(--padding-6xs);
+        gap: 0 8px;
+        margin-top: -50px;
+        font-size: var(--typography-desktop-h6-size);
+        color: var(--neutral-black);
+        }
+        .special-offer-hotels7 {
+        height: 140px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        }
+        .button-confirm,
+        .special-offer-hotels6 {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        }
+        .special-offer-hotels6 {
+        width: 273px;
+        justify-content: flex-start;
+        }
+        .button-confirm {
+        align-self: stretch;
+        justify-content: flex-end;
+        }
+        .tag-child {
+        width: 6.4px;
+        height: 8.7px;
+        position: absolute;
+        margin: 0 !important;
+        bottom: -1.2px;
+        left: -1px;
+        object-fit: contain;
+        }
+        .subtract-icon4,
+        .tag-item {
+        width: 10px;
+        height: 6px;
+        position: relative;
+        }
+        .subtract-icon4 {
+        width: 55px;
+        height: 55px;
+        z-index: 1;
+        margin-top: -6px;
+        }
+        .special-offer4 {
+        width: 34px;
+        position: absolute;
+        margin: 0 !important;
+        top: 32.57px;
+        left: 2px;
+        line-height: 150%;
+        text-transform: capitalize;
+        white-space: pre-wrap;
+        display: inline-block;
+        transform: rotate(-44.83deg);
+        transform-origin: 0 0;
+        z-index: 2;
+        }
+        .tag4 {
+        margin-top: -6px;
+        margin-left: -5px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding: 0 0 var(--padding-12xs);
+        position: relative;
+        z-index: 1;
+        }
+        .image-1-icon4 {
+        height: 124px;
+        width: 125px;
+        position: relative;
+        border-radius: var(--br-11xs) 0 0 var(--br-11xs);
+        object-fit: cover;
+        }
+        .berlin4,
+        .wed-25-jan-fri4 {
+        align-self: stretch;
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        }
+        .wed-25-jan-fri4 {
+        font-size: var(--typography-desktop-button-xs-size);
+        font-weight: 300;
+        }
+        .text-berlin4,
+        .text26 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        }
+        .text26 {
+        align-self: stretch;
+        gap: 4px 0;
+        }
+        .text-berlin4 {
+        flex: 1;
+        padding: var(--padding-xl) 0;
+        box-sizing: border-box;
+        min-width: 81px;
+        }
+        .special-flight-offers4,
+        .special-offer-hotels9 {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        }
+        .special-flight-offers4 {
+        flex: 1;
+        border-radius: var(--br-9xs);
+        background-color: var(--neutral-white);
+        border: 1px solid var(--color-gainsboro-100);
+        align-items: center;
+        padding: var(--padding-5xs) var(--padding-6xs);
+        gap: 0 8px;
+        margin-left: -51px;
+        font-size: var(--typography-desktop-h6-size);
+        color: var(--neutral-black);
+        }
+        .special-offer-hotels9 {
+        width: 273px;
+        align-items: flex-start;
+        }
+        .special-offer-hotels8 {
+        flex-direction: row;
+        }
+        .input-email,
+        .q-r-codes,
+        .special-offer-hotels8,
+        .special-offers-cards {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        }
+        .input-email {
+        align-self: stretch;
+        flex-direction: column;
+        gap: 120px 0;
+        }
+        .q-r-codes,
+        .special-offers-cards {
+        box-sizing: border-box;
+        max-width: 100%;
+        }
+        .q-r-codes {
+        width: 370px;
+        flex-direction: column;
+        padding: var(--padding-lgi) 0 0;
+        min-width: 370px;
+        }
+        .special-offers-cards {
+        align-self: stretch;
+        border-radius: 0 0 var(--br-5xs) var(--br-5xs);
+        overflow: hidden;
+        flex-direction: row;
+        padding: 59px 33px var(--padding-xl);
+        gap: 0 50px;
+        background-image: url(./public/special-offers-cards@3x.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        }
+        .special-offers {
+        margin: 0;
+        width: 353px;
+        height: 35px;
+        position: relative;
+        font-size: inherit;
+        line-height: 140%;
+        text-transform: capitalize;
+        font-weight: 700;
+        font-family: inherit;
+        display: inline-block;
+        flex-shrink: 0;
+        max-width: 100%;
+        }
+        .vuesaxoutlinearrow-down-icon {
+        height: 16px;
+        width: 16px;
+        position: relative;
+        display: none;
+        }
+        .deals-discover {
+        position: absolute;
+        top: 8px;
+        left: 16px;
+        line-height: 150%;
+        text-transform: capitalize;
+        }
+        .iconsarrowsarrow-right {
+        position: absolute;
+        top: 12px;
+        left: 142px;
+        width: 16px;
+        height: 16px;
+        overflow: hidden;
+        }
+        .button4 {
+        height: 40px;
+        width: 174px;
+        position: relative;
+        border-radius: var(--br-9xs);
+        background-color: rgba(12, 12, 12, 0.7);
+        backdrop-filter: blur(8px);
+        overflow: hidden;
+        flex-shrink: 0;
+        display: none;
+        }
+        .vuesaxoutlinearrow-down-icon1 {
+        height: 16px;
+        width: 16px;
+        position: relative;
+        display: none;
+        }
+        .loyalty-discounts {
+        flex: 1;
+        position: relative;
+        font-size: var(--typography-desktop-h6-size);
+        line-height: 140%;
+        text-transform: capitalize;
+        font-weight: 500;
+        font-family: var(--typography-desktop-caption-s);
+        color: var(--neutral-white);
+        text-align: center;
+        }
+        .iconsarrowsarrow-right1 {
+        width: 16px;
+        height: 16px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        }
+        .button5,
+        .photo-1,
+        .star-rating {
+        display: flex;
+        justify-content: flex-start;
+        }
+        .star-rating {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: var(--padding-10xs) 0 0;
+        }
+        .button5,
+        .photo-1 {
+        overflow: hidden;
+        flex-shrink: 0;
+        flex-direction: row;
+        box-sizing: border-box;
+        }
+        .button5 {
+        cursor: pointer;
+        border: 0;
+        padding: var(--padding-4xs) var(--padding-base);
+        background-color: var(--primary-500);
+        width: 197px;
+        border-radius: var(--br-9xs);
+        backdrop-filter: blur(8px);
+        align-items: flex-start;
+        gap: 0 8px;
+        z-index: 1;
+        }
+        .photo-1 {
+        height: 280px;
+        width: 300px;
+        border-radius: var(--br-5xs) 0 0 0;
+        align-items: flex-end;
+        padding: var(--padding-base);
+        background-image: url(./public/photo-1@3x.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        }
+        .vuesaxoutlinearrow-down-icon2 {
+        height: 16px;
+        width: 16px;
+        position: relative;
+        display: none;
+        }
+        .early-booking-discounts {
+        flex: 1;
+        position: relative;
+        font-size: var(--typography-desktop-h6-size);
+        line-height: 140%;
+        text-transform: capitalize;
+        font-weight: 500;
+        font-family: var(--typography-desktop-caption-s);
+        color: var(--neutral-white);
+        text-align: center;
+        }
+        .iconsarrowsarrow-right2 {
+        width: 16px;
+        height: 16px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        }
+        .button6,
+        .photo-2,
+        .star-rating1 {
+        display: flex;
+        justify-content: flex-start;
+        }
+        .star-rating1 {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: var(--padding-10xs) 0 0;
+        }
+        .button6,
+        .photo-2 {
+        overflow: hidden;
+        flex-direction: row;
+        box-sizing: border-box;
+        }
+        .button6 {
+        cursor: pointer;
+        border: 0;
+        padding: var(--padding-4xs) var(--padding-base);
+        background-color: var(--primary-500);
+        width: 248px;
+        border-radius: var(--br-9xs);
+        backdrop-filter: blur(8px);
+        flex-shrink: 0;
+        align-items: flex-start;
+        gap: 0 8px;
+        }
+        .photo-2 {
+        flex: 1;
+        align-items: flex-end;
+        padding: var(--padding-base);
+        background-image: url(./public/photo-2@3x.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        min-width: 385px;
+        min-height: 280px;
+        max-width: 100%;
+        }
+        .vuesaxoutlinearrow-down-icon3 {
+        height: 16px;
+        width: 16px;
+        position: relative;
+        display: none;
+        }
+        .last-minute-deals {
+        flex: 1;
+        position: relative;
+        font-size: var(--typography-desktop-h6-size);
+        line-height: 140%;
+        text-transform: capitalize;
+        font-weight: 500;
+        font-family: var(--typography-desktop-caption-s);
+        color: var(--neutral-white);
+        text-align: center;
+        }
+        .iconsarrowsarrow-right3 {
+        width: 16px;
+        height: 16px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        }
+        .star-rating2 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: var(--padding-10xs) 0 0;
+        }
+        .button7 {
+        cursor: pointer;
+        border: 0;
+        padding: var(--padding-4xs) var(--padding-base);
+        background-color: var(--primary-500);
+        width: 202px;
+        border-radius: var(--br-9xs);
+        backdrop-filter: blur(8px);
+        overflow: hidden;
+        flex-shrink: 0;
+        align-items: flex-start;
+        box-sizing: border-box;
+        gap: 0 8px;
+        }
+        .button7,
+        .news-updates-btn,
+        .photo-3 {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        }
+        .photo-3 {
+        height: 280px;
+        width: 300px;
+        overflow: hidden;
+        flex-shrink: 0;
+        align-items: flex-end;
+        padding: var(--padding-base);
+        box-sizing: border-box;
+        background-image: url(./public/photo-3@3x.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        }
+        .news-updates-btn {
+        align-self: stretch;
+        align-items: flex-start;
+        gap: 0 16px;
+        max-width: 100%;
+        }
+        .vuesaxoutlinearrow-down-icon4 {
+        height: 16px;
+        width: 16px;
+        position: relative;
+        display: none;
+        }
+        .family-packages {
+        flex: 1;
+        position: relative;
+        font-size: var(--typography-desktop-h6-size);
+        line-height: 140%;
+        text-transform: capitalize;
+        font-weight: 500;
+        font-family: var(--typography-desktop-caption-s);
+        color: var(--neutral-white);
+        text-align: center;
+        }
+        .iconsarrowsarrow-right4 {
+        width: 16px;
+        height: 16px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        }
+        .star-rating3 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: var(--padding-10xs) 0 0;
+        }
+        .button8,
+        .photo-4,
+        .text27 {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        }
+        .text27 {
+        flex: 1;
+        align-items: flex-start;
+        gap: 0 8px;
+        }
+        .button8,
+        .photo-4 {
+        overflow: hidden;
+        flex-shrink: 0;
+        box-sizing: border-box;
+        }
+        .button8 {
+        cursor: pointer;
+        border: 0;
+        padding: var(--padding-4xs) var(--padding-base);
+        background-color: var(--primary-500);
+        width: 193px;
+        border-radius: var(--br-9xs);
+        backdrop-filter: blur(8px);
+        align-items: flex-start;
+        gap: 0 16px;
+        }
+        .photo-4 {
+        height: 280px;
+        width: 300px;
+        border-radius: 0 0 0 var(--br-5xs);
+        align-items: flex-end;
+        padding: var(--padding-base);
+        background-image: url(./public/photo-4@3x.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        }
+        .vuesaxoutlinearrow-down-icon5 {
+        height: 16px;
+        width: 16px;
+        position: relative;
+        display: none;
+        }
+        .birthday-or-anniversary {
+        flex: 1;
+        position: relative;
+        font-size: var(--typography-desktop-h6-size);
+        line-height: 140%;
+        text-transform: capitalize;
+        font-weight: 500;
+        font-family: var(--typography-desktop-caption-s);
+        color: var(--neutral-white);
+        text-align: center;
+        display: inline-block;
+        min-width: 172px;
+        }
+        .iconsarrowsarrow-right5 {
+        width: 16px;
+        height: 16px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        }
+        .star-rating4 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: var(--padding-10xs) 0 0;
+        }
+        .button9,
+        .photo-5,
+        .text28 {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        }
+        .text28 {
+        flex: 1;
+        align-items: flex-start;
+        gap: 0 7px;
+        }
+        .button9,
+        .photo-5 {
+        overflow: hidden;
+        box-sizing: border-box;
+        }
+        .button9 {
+        cursor: pointer;
+        border: 0;
+        padding: var(--padding-4xs) var(--padding-base);
+        background-color: var(--primary-500);
+        width: 319px;
+        border-radius: var(--br-9xs);
+        backdrop-filter: blur(8px);
+        flex-shrink: 0;
+        align-items: flex-start;
+        gap: 0 16px;
+        }
+        .photo-5 {
+        flex: 1;
+        align-items: flex-end;
+        padding: var(--padding-base);
+        background-image: url(./public/photo-5@3x.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        min-width: 385px;
+        min-height: 280px;
+        max-width: 100%;
+        }
+        .vuesaxoutlinearrow-down-icon6 {
+        height: 16px;
+        width: 16px;
+        position: relative;
+        display: none;
+        }
+        .referral-programs {
+        flex: 1;
+        position: relative;
+        font-size: var(--typography-desktop-h6-size);
+        line-height: 140%;
+        text-transform: capitalize;
+        font-weight: 500;
+        font-family: var(--typography-desktop-caption-s);
+        color: var(--neutral-white);
+        text-align: center;
+        }
+        .iconsarrowsarrow-right6 {
+        width: 16px;
+        height: 16px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        }
+        .star-rating5 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: var(--padding-10xs) 0 0;
+        }
+        .button10,
+        .star-rating5,
+        .text29 {
+        align-items: flex-start;
+        }
+        .text29 {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 0 8px;
+        }
+        .button10 {
+        cursor: pointer;
+        border: 0;
+        padding: var(--padding-4xs) var(--padding-base);
+        background-color: var(--primary-500);
+        width: 202px;
+        border-radius: var(--br-9xs);
+        backdrop-filter: blur(8px);
+        overflow: hidden;
+        flex-shrink: 0;
+        box-sizing: border-box;
+        gap: 0 16px;
+        }
+        .button10,
+        .down,
+        .photo-6 {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        }
+        .photo-6 {
+        height: 280px;
+        width: 300px;
+        border-radius: 0 0 var(--br-5xs) 0;
+        overflow: hidden;
+        flex-shrink: 0;
+        align-items: flex-end;
+        padding: var(--padding-base);
+        box-sizing: border-box;
+        background-image: url(./public/photo-6@3x.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        }
+        .down {
+        align-self: stretch;
+        align-items: flex-start;
+        gap: 0 16px;
+        max-width: 100%;
+        }
+        .about-us-container,
+        .app-barcode-footer {
+        align-self: stretch;
+        flex-direction: column;
+        justify-content: flex-start;
+        }
+        .about-us-container {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px 0;
+        max-width: 100%;
+        text-align: center;
+        font-size: var(--typography-desktop-h6-size);
+        color: var(--neutral-100);
+        }
+        .app-barcode-footer {
+        gap: 32px 0;
+        font-size: var(--typography-desktop-h3-size);
+        color: var(--neutral-black);
+        }
+        .app-barcode-footer,
+        .footer-final,
+        .header-bar {
+        display: flex;
+        align-items: flex-start;
+        max-width: 100%;
+        }
+        .header-bar {
+        width: 1224px;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 48px 0;
+        }
+        .footer-final {
+        align-self: stretch;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0 var(--padding-xl) 573px;
+        box-sizing: border-box;
+        flex-shrink: 0;
+        text-align: left;
+        font-size: var(--font-size-7xs);
+        color: var(--neutral-200);
+        font-family: var(--typography-desktop-caption-s);
+        }
+        .icon-flag-icon-set-43-y {
+        width: 24px;
+        height: 18px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        }
+        .auto-layout-scan {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: var(--padding-11xs) 0 0;
+        }
+        .teacher-terece {
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        font-weight: 500;
+        }
+        .teacher {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 0 8px;
+        }
+        .returning-to-this {
+        margin: 0;
+        }
+        .returning-to-this-container {
+        height: 109px;
+        flex: 1;
+        position: relative;
+        line-height: 140%;
+        display: inline-block;
+        }
+        .text33 {
+        margin-left: -2px;
+        height: 92px;
+        flex: 1;
+        flex-direction: row;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        .text31,
+        .text32,
+        .text33 {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        }
+        .text32 {
+        align-self: stretch;
+        height: 86px;
+        flex-direction: row;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: var(--typography-desktop-caption-s-size);
+        }
+        .text31 {
+        flex: 1;
+        flex-direction: column;
+        gap: 16px 0;
+        }
+        .photo-icon1,
+        .text30 {
+        position: absolute;
+        overflow: hidden;
+        }
+        .text30 {
+        top: 74px;
+        left: 0;
+        border-radius: var(--br-5xs);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), transparent),
+            rgba(0, 0, 0, 0.2);
+        width: 100%;
+        height: 216px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding: var(--padding-13xl);
+        box-sizing: border-box;
+        }
+        .photo-icon1 {
+        top: 0;
+        left: 66px;
+        border-radius: var(--br-281xl);
+        width: 120px;
+        height: 117.9px;
+        object-fit: contain;
+        z-index: 1;
+        }
+        .component-1 {
+        height: 290px;
+        width: 252px;
+        position: relative;
+        }
+        .icon-flag-icon-set-43-n {
+        width: 24px;
+        height: 18px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        }
+        .icon-flag-icon-set-43-n-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: var(--padding-11xs) 0 0;
+        }
+        .beyu68 {
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        font-weight: 500;
+        }
+        .beyu {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 0 8px;
+        }
+        .accessing-easyset24-extraordin {
+        height: 109px;
+        flex: 1;
+        position: relative;
+        line-height: 140%;
+        display: inline-block;
+        }
+        .text37 {
+        margin-left: -2px;
+        height: 92px;
+        flex: 1;
+        flex-direction: row;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        .text35,
+        .text36,
+        .text37 {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        }
+        .text36 {
+        align-self: stretch;
+        height: 86px;
+        flex-direction: row;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: var(--typography-desktop-caption-s-size);
+        }
+        .text35 {
+        flex: 1;
+        flex-direction: column;
+        gap: 16px 0;
+        }
+        .photo-icon2,
+        .text34 {
+        position: absolute;
+        overflow: hidden;
+        }
+        .text34 {
+        top: 74px;
+        left: 0;
+        border-radius: var(--br-5xs);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), transparent),
+            rgba(0, 0, 0, 0.2);
+        width: 100%;
+        height: 216px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding: var(--padding-13xl);
+        box-sizing: border-box;
+        }
+        .photo-icon2 {
+        top: 0;
+        left: 66px;
+        border-radius: var(--br-281xl);
+        width: 120px;
+        height: 117.9px;
+        object-fit: contain;
+        z-index: 1;
+        }
+        .component-2 {
+        height: 290px;
+        width: 252px;
+        position: relative;
+        }
+        .icon-flag-icon-set-43-c {
+        width: 24px;
+        height: 18px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        }
+        .icon-flag-icon-set-43-c-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: var(--padding-11xs) 0 0;
+        }
+        .elina13ay {
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        font-weight: 500;
+        }
+        .elina {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 0 8px;
+        }
+        .weekends-here-are {
+        margin: 0;
+        }
+        .weekends-here-are-container {
+        height: 109px;
+        flex: 1;
+        position: relative;
+        line-height: 140%;
+        display: inline-block;
+        }
+        .text41 {
+        margin-left: -2px;
+        height: 92px;
+        flex: 1;
+        flex-direction: row;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        .text39,
+        .text40,
+        .text41 {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        }
+        .text40 {
+        align-self: stretch;
+        height: 86px;
+        flex-direction: row;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: var(--typography-desktop-caption-s-size);
+        }
+        .text39 {
+        flex: 1;
+        flex-direction: column;
+        gap: 16px 0;
+        }
+        .photo-icon3,
+        .text38 {
+        position: absolute;
+        overflow: hidden;
+        }
+        .text38 {
+        top: 74px;
+        left: 0;
+        border-radius: var(--br-5xs);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), transparent),
+            rgba(0, 0, 0, 0.2);
+        width: 100%;
+        height: 216px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding: var(--padding-13xl);
+        box-sizing: border-box;
+        }
+        .photo-icon3 {
+        top: 0;
+        left: 66px;
+        border-radius: var(--br-281xl);
+        width: 120px;
+        height: 117.9px;
+        object-fit: contain;
+        z-index: 1;
+        }
+        .component-3 {
+        height: 290px;
+        width: 252px;
+        position: relative;
+        }
+        .frame-link-social,
+        .review-cards {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        max-width: 100%;
+        }
+        .review-cards {
+        width: 956px;
+        justify-content: space-between;
+        gap: var(--gap-xl);
+        }
+        .frame-link-social {
+        width: 1180px;
+        justify-content: center;
+        }
+        .make-a-comprasion1 {
+        margin: 0;
+        align-self: stretch;
+        height: 36px;
+        position: relative;
+        font-size: inherit;
+        line-height: 140%;
+        text-transform: capitalize;
+        font-weight: 700;
+        font-family: inherit;
+        display: inline-block;
+        flex-shrink: 0;
+        }
+        .make-a-compraion-text {
+        width: 353px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        max-width: 100%;
+        flex-shrink: 0;
+        }
+        .the-past-offers {
+        height: 44px;
+        flex: 1;
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        display: flex;
+        align-items: center;
+        max-width: 100%;
+        }
+        .photo-left {
+        width: 573px;
+        border-radius: var(--br-5xs);
+        overflow: hidden;
+        flex-shrink: 0;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding: var(--padding-base);
+        box-sizing: border-box;
+        background-image: url(./public/photo-left@3x.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        min-width: 573px;
+        min-height: 400px;
+        }
+        .photo-left,
+        .photo-right,
+        .ring-in-the {
+        display: flex;
+        max-width: 100%;
+        }
+        .ring-in-the {
+        height: 44px;
+        flex: 1;
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        align-items: center;
+        }
+        .photo-right {
+        width: 631px;
+        border-radius: var(--br-5xs);
+        overflow: hidden;
+        flex-shrink: 0;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding: var(--padding-base);
+        box-sizing: border-box;
+        background-image: url(./public/photo-right@3x.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        min-width: 631px;
+        min-height: 400px;
+        }
+        .make-a-compoasion-cards {
+        align-self: stretch;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-shrink: 0;
+        gap: var(--gap-xl);
+        font-size: var(--typography-desktop-h6-size);
+        color: var(--neutral-white);
+        }
+        .back-review-cards,
+        .cards,
+        .make-a-compoasion-cards,
+        .make-a-comprasion {
+        display: flex;
+        align-items: flex-start;
+        max-width: 100%;
+        }
+        .cards {
+        flex: 1;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 32px 0;
+        }
+        .back-review-cards,
+        .make-a-comprasion {
+        align-self: stretch;
+        flex-shrink: 0;
+        }
+        .make-a-comprasion {
+        flex-direction: row;
+        justify-content: center;
+        font-size: var(--typography-desktop-h3-size);
+        color: var(--neutral-black);
+        }
+        .back-review-cards {
+        height: 609px;
+        overflow: hidden;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: var(--padding-41xl) 86px 0 131px;
+        box-sizing: border-box;
+        gap: 87px 0;
+        background-image: url(./public/back-review-cards@3x.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        }
+        .blank-line1 {
+        color: inherit;
+        }
+        .blank-line,
+        .reserve-your-hotel {
+        margin: 0;
+        }
+        .reserve-your-hotel-container {
+        margin: 0;
+        flex: 1;
+        position: relative;
+        font-size: inherit;
+        line-height: 140%;
+        text-transform: capitalize;
+        font-weight: 700;
+        font-family: inherit;
+        display: inline-block;
+        max-width: 100%;
+        }
+        .banner11 {
+        flex: 1;
+        border-radius: var(--br-5xs) 0 0 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding: var(--padding-base);
+        box-sizing: border-box;
+        background-image: url(./public/banner1@3x.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        min-width: 390px;
+        min-height: 346px;
+        max-width: 100%;
+        }
+        .subscribe-our-newsletter {
+        flex: 1;
+        position: relative;
+        font-size: var(--typography-desktop-h4-size);
+        line-height: 140%;
+        text-transform: capitalize;
+        display: inline-block;
+        font-family: var(--typography-desktop-caption-s);
+        color: var(--neutral-white);
+        text-align: left;
+        max-width: 100%;
+        }
+        .banner2 {
+        cursor: pointer;
+        border: 0;
+        padding: var(--padding-base);
+        background-color: transparent;
+        flex: 1;
+        border-radius: 0 var(--br-5xs) 0 0;
+        overflow: hidden;
+        align-items: flex-end;
+        box-sizing: border-box;
+        background-image: url(./public/banner2@3x.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        min-width: 390px;
+        min-height: 346px;
+        }
+        .banner1,
+        .banner2,
+        .banner31 {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        max-width: 100%;
+        }
+        .banner1 {
+        align-self: stretch;
+        align-items: flex-start;
+        gap: 0 24px;
+        }
+        .banner31 {
+        border: 0;
+        background-color: transparent;
+        height: 261px;
+        width: auto;
+        outline: 0;
+        flex: 1;
+        border-radius: 0 0 0 var(--br-5xs);
+        overflow: hidden;
+        align-items: flex-end;
+        padding: var(--padding-base);
+        box-sizing: border-box;
+        background-image: url(./public/banner3@3x.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        color: var(--neutral-white);
+        min-width: 390px;
+        }
+        .blank-line4 {
+        text-decoration: underline;
+        font-weight: 800;
+        }
+        .blank-line3 {
+        color: inherit;
+        }
+        .blank-line2 {
+        margin: 0;
+        }
+        .follow-the-lates {
+        text-transform: capitalize;
+        }
+        .follow-the-lates-tour-news {
+        margin: 0;
+        font-size: var(--typography-desktop-h4-size);
+        }
+        .follow-the-lates-container {
+        flex: 1;
+        position: relative;
+        line-height: 140%;
+        display: inline-block;
+        max-width: 100%;
+        }
+        .banner3,
+        .banner4 {
+        flex-direction: row;
+        justify-content: flex-start;
+        }
+        .banner4 {
+        flex: 1;
+        border-radius: 0 0 var(--br-5xs) 0;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-end;
+        padding: var(--padding-base);
+        box-sizing: border-box;
+        background-image: url(./public/banner4@3x.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        min-width: 390px;
+        min-height: 261px;
+        max-width: 100%;
+        }
+        .banner3 {
+        align-self: stretch;
+        gap: 0 24px;
+        font-size: var(--typography-desktop-button-m-size);
+        }
+        .banner-newsletter,
+        .banner3,
+        .cards1,
+        .security-seal-node {
+        display: flex;
+        align-items: flex-start;
+        max-width: 100%;
+        }
+        .cards1 {
+        width: 1224px;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 24px 0;
+        }
+        .banner-newsletter,
+        .security-seal-node {
+        align-self: stretch;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0 var(--padding-xl);
+        box-sizing: border-box;
+        font-size: var(--typography-desktop-h4-size);
+        }
+        .banner-newsletter {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 0 0 var(--padding-41xl);
+        gap: 60px 0;
+        flex-shrink: 0;
+        text-align: left;
+        font-size: var(--typography-desktop-h6-size);
+        color: var(--neutral-white);
+        font-family: var(--typography-desktop-caption-s);
+        }
+        .go-further-with {
+        position: relative;
+        line-height: 140%;
+        }
+        .travel-description-and-click-o {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        font-size: var(--typography-desktop-h5-size);
+        }
+        .enjoy-savings-on {
+        align-self: stretch;
+        color: var(--neutral-black);
+        }
+        .enjoy-savings-on,
+        .secured-by-europe {
+        position: relative;
+        line-height: 150%;
+        text-transform: capitalize;
+        }
+        .text42 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        color: var(--neutral-500);
+        }
+        .auto-layout1 {
+        width: 704px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 4px 0;
+        max-width: 100%;
+        }
+        .httpslottiefilescomanimat-icon,
+        .qr-code-icon {
+        height: 40px;
+        width: 120px;
+        position: relative;
+        object-fit: cover;
+        min-height: 40px;
+        }
+        .qr-code-icon {
+        width: 41px;
+        border-radius: var(--br-9xs);
+        overflow: hidden;
+        flex-shrink: 0;
+        object-fit: contain;
+        }
+        .auto-layout-barcode-app-store {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 0 24px;
+        }
+        .httpslottiefilescomanimat-icon1,
+        .qr-code-icon1 {
+        height: 40px;
+        width: 121px;
+        position: relative;
+        object-fit: cover;
+        min-height: 40px;
+        }
+        .qr-code-icon1 {
+        width: 40px;
+        border-radius: var(--br-9xs);
+        overflow: hidden;
+        flex-shrink: 0;
+        object-fit: contain;
+        }
+        .auto-layout-barcode-google-pla,
+        .auto-layout-scane-barcode {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0 24px;
+        }
+        .auto-layout-scane-barcode {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px 0;
+        }
+        .easyset24-app-footer {
+        align-self: stretch;
+        background-color: var(--neutral-100);
+        border-bottom: 2px solid var(--neutral-200);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: var(--padding-5xl) var(--padding-89xl);
+        max-width: 100%;
+        flex-shrink: 0;
+        gap: var(--gap-xl);
+        text-align: left;
+        font-size: var(--typography-desktop-button-m-size);
+        color: var(--primary-500);
+        font-family: var(--typography-desktop-caption-s);
+        }
+        .base {
+        width: 58px;
+        height: 40px;
+        position: relative;
+        display: none;
+        }
+        .customer-service {
+        width: 108px;
+        color: var(--neutral-black);
+        }
+        .customer-service,
+        .our-story,
+        .work-with-us {
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        display: inline-block;
+        }
+        .our-story {
+        width: 108px;
+        }
+        .work-with-us {
+        height: 18px;
+        flex-shrink: 0;
+        }
+        .press-media {
+        width: 126px;
+        }
+        .press-media,
+        .privacy-security {
+        height: 18px;
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        display: inline-block;
+        flex-shrink: 0;
+        }
+        .auto-layout-about-us {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0 0 var(--padding-xs);
+        gap: 16px 0;
+        }
+        .we-offer {
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        color: var(--neutral-black);
+        }
+        .trip-sponsorship {
+        width: 148px;
+        display: inline-block;
+        }
+        .ai-driven-search,
+        .best-deals,
+        .last-minutes-flights,
+        .trip-sponsorship {
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        }
+        .ai-driven-search,
+        .best-deals {
+        width: 148px;
+        display: inline-block;
+        }
+        .auto-layout-we-offer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 16px 0;
+        }
+        .headquarters {
+        color: var(--neutral-black);
+        }
+        .england1,
+        .headquarters {
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        }
+        .france {
+        width: 66px;
+        display: inline-block;
+        }
+        .canada,
+        .france,
+        .iceland {
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        }
+        .auto-layout-headquarters {
+        width: 123px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: var(--gap-base);
+        }
+        .travel-blogs {
+        color: var(--neutral-black);
+        }
+        .bali-travel-guide,
+        .travel-blogs {
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        }
+        .sri-travel-guide {
+        width: 140px;
+        display: inline-block;
+        }
+        .peru-travel-guide,
+        .sri-travel-guide,
+        .swiss-travel-guide {
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        }
+        .swiss-travel-guide {
+        align-self: stretch;
+        }
+        .auto-layout-travel-blogs {
+        width: 161px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 16px 0;
+        }
+        .activities {
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        color: var(--neutral-black);
+        }
+        .tour-leading {
+        align-self: stretch;
+        }
+        .camping,
+        .cruising-sailing,
+        .kayaking,
+        .tour-leading {
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        }
+        .camping,
+        .kayaking {
+        align-self: stretch;
+        }
+        .auto-layout-activities1 {
+        width: 140px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 16px 0;
+        }
+        .service1 {
+        width: 92px;
+        display: inline-block;
+        color: var(--neutral-black);
+        }
+        .report-error,
+        .service1 {
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        }
+        .ask-online {
+        width: 99px;
+        display: inline-block;
+        }
+        .ask-online,
+        .travel-insurance {
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        }
+        .auto-layou-service {
+        height: 132px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0;
+        box-sizing: border-box;
+        gap: 16px 0;
+        }
+        .auto-layout-the-whole-episode {
+        width: 1223px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: var(--gap-xl);
+        max-width: 100%;
+        }
+        .visa-logo-icon {
+        height: 14px;
+        width: 57.2px;
+        position: relative;
+        }
+        .amex-icon,
+        .visa-card {
+        border-radius: var(--br-9xs);
+        }
+        .visa-card {
+        cursor: pointer;
+        border: 1px solid var(--neutral-300);
+        padding: var(--padding-mid) var(--padding-sm) var(--padding-mid)
+            var(--padding-base);
+        background-color: var(--neutral-100);
+        flex: 1;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        min-width: 58px;
+        }
+        .amex-icon {
+        height: 48px;
+        width: 89.3px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        object-fit: cover;
+        min-height: 48px;
+        }
+        .internationalbankmasterrcard-icon {
+        width: 47px;
+        height: 31px;
+        position: relative;
+        object-fit: contain;
+        }
+        .master-card {
+        flex: 1;
+        border-radius: var(--br-9xs);
+        background-color: var(--neutral-100);
+        border: 1px solid var(--neutral-300);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: var(--padding-5xs) var(--padding-base);
+        min-width: 58px;
+        }
+        .international-icon {
+        align-self: stretch;
+        height: 14px;
+        position: relative;
+        max-width: 100%;
+        overflow: hidden;
+        flex-shrink: 0;
+        object-fit: contain;
+        }
+        .payment-methods,
+        .paypal {
+        display: flex;
+        box-sizing: border-box;
+        }
+        .paypal {
+        flex: 1;
+        border-radius: var(--br-9xs);
+        background-color: var(--neutral-100);
+        border: 1px solid var(--neutral-300);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: var(--padding-5xs) var(--padding-mini);
+        min-width: 58px;
+        min-height: 48px;
+        }
+        .payment-methods {
+        width: 405px;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0;
+        gap: 0 15.97px;
+        max-width: 100%;
+        z-index: 1;
+        }
+        .linkedin-icon,
+        .telegram-icon,
+        .twitter-icon {
+        height: 24px;
+        width: 24px;
+        position: relative;
+        min-height: 24px;
+        }
+        .linkedin-icon {
+        overflow: hidden;
+        flex-shrink: 0;
+        }
+        .telegram-icon,
+        .twitter-icon {
+        border-radius: var(--br-7xs);
+        }
+        .facebook-icon,
+        .telegram-icon,
+        .twitter-icon {
+        overflow: hidden;
+        flex-shrink: 0;
+        }
+        .facebook-icon,
+        .instagram-icon {
+        height: 24px;
+        width: 24px;
+        position: relative;
+        min-height: 24px;
+        }
+        .social-networks {
+        align-self: stretch;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: var(--gap-xl);
+        }
+        .send-email-frame {
+        width: 216px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0 0 var(--padding-xs);
+        box-sizing: border-box;
+        }
+        .title {
+        position: relative;
+        line-height: 150%;
+        text-transform: capitalize;
+        }
+        .e-mail-text {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: var(--padding-9xs) var(--padding-5xs) var(--padding-9xs) 0;
+        }
+        .iconsofficemail {
+        height: 24px;
+        width: 24px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        min-height: 24px;
+        }
+        .enter-yout-email {
+        width: calc(100% - 24px);
+        border: 0;
+        outline: 0;
+        font-family: var(--typography-desktop-caption-s);
+        font-size: var(--typography-desktop-button-m-size);
+        background-color: transparent;
+        height: 21px;
+        flex: 1;
+        position: relative;
+        line-height: 150%;
+        text-transform: capitalize;
+        color: var(--neutral-400);
+        text-align: left;
+        display: inline-block;
+        min-width: 67px;
+        padding: 0;
+        }
+        .text43 {
+        width: 152px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0 16px;
+        }
+        .iconsbasesearch1 {
+        height: 24px;
+        width: 24px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        display: none;
+        }
+        .auto-layout-input {
+        align-self: stretch;
+        height: 48px;
+        border-radius: var(--br-9xs) 0 0 var(--br-9xs);
+        background-color: var(--neutral-white);
+        border: 0.5px solid var(--neutral-400);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: var(--padding-5xs);
+        gap: 0 32px;
+        }
+        .information3 {
+        height: 14px;
+        flex: 1;
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        font-weight: 500;
+        display: inline-block;
+        }
+        .sub-headings {
+        width: 68px;
+        display: none;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: var(--padding-9xs) var(--padding-5xs) var(--padding-9xs) 0;
+        box-sizing: border-box;
+        font-size: var(--typography-desktop-button-xs-size);
+        color: var(--neutral-500);
+        }
+        .input8 {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        min-width: 203px;
+        }
+        .vuesaxoutlinearrow-down-icon7 {
+        height: 16px;
+        width: 16px;
+        position: relative;
+        display: none;
+        }
+        .icon-mail {
+        position: relative;
+        font-size: var(--typography-desktop-button-m-size);
+        line-height: 140%;
+        text-transform: capitalize;
+        font-weight: 500;
+        font-family: var(--typography-desktop-caption-s);
+        color: var(--neutral-white);
+        text-align: right;
+        }
+        .vuesaxoutlinetick-square-icon {
+        height: 16px;
+        width: 16px;
+        position: relative;
+        display: none;
+        }
+        .text44 {
+        cursor: pointer;
+        border: 0;
+        padding: 0;
+        background-color: transparent;
+        align-items: center;
+        justify-content: center;
+        gap: 0 8px;
+        }
+        .button11,
+        .confirm-button,
+        .text44 {
+        display: flex;
+        flex-direction: row;
+        }
+        .button11 {
+        align-self: stretch;
+        border-radius: 0 var(--br-9xs) var(--br-9xs) 0;
+        background-color: var(--primary-500);
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        padding: var(--padding-5xs) var(--padding-2xs);
+        gap: 0 16px;
+        }
+        .confirm-button {
+        height: 48px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        }
+        .footer-service-column,
+        .send-an-email {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        max-width: 100%;
+        }
+        .send-an-email {
+        width: 406px;
+        justify-content: flex-start;
+        row-gap: 20px;
+        }
+        .footer-service-column {
+        width: 1224px;
+        justify-content: space-between;
+        gap: var(--gap-xl);
+        font-size: var(--typography-desktop-button-m-size);
+        color: var(--neutral-black);
+        }
+        .footer {
+        align-self: stretch;
+        background-color: var(--color-whitesmoke-100);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: var(--padding-29xl) var(--padding-xl) var(--padding-29xl)
+            var(--padding-3xl);
+        box-sizing: border-box;
+        gap: 41px 0;
+        max-width: 100%;
+        }
+        .iconscharactercopyright {
+        height: 20px;
+        width: 20px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        }
+        .icon {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        }
+        .copyright-easyset24 {
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        font-weight: 500;
+        }
+        .text-1,
+        .under-title-footer {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        }
+        .text-1 {
+        flex-direction: row;
+        gap: 0 4px;
+        }
+        .under-title-footer {
+        flex-direction: column;
+        padding: var(--padding-12xs) 0 0;
+        }
+        .iconsofficeemail-down {
+        height: 20px;
+        width: 20px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        }
+        .icon1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        }
+        .easyset24gmailcom {
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        font-weight: 500;
+        white-space: nowrap;
+        }
+        .frame-privacy {
+        flex-direction: column;
+        padding: var(--padding-10xs) 0 0;
+        }
+        .frame-footer1,
+        .frame-privacy,
+        .text-2 {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        }
+        .text-2 {
+        flex-direction: row;
+        gap: 0 8px;
+        }
+        .frame-footer1 {
+        flex-direction: column;
+        padding: var(--padding-12xs) 0 0;
+        }
+        .easyset24-seamless-journeys {
+        position: relative;
+        font-size: var(--typography-desktop-h6-size);
+        line-height: 140%;
+        text-transform: capitalize;
+        display: inline-block;
+        max-width: 100%;
+        }
+        .iconstravelslocal-two {
+        height: 20px;
+        width: 20px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        min-height: 20px;
+        }
+        .oxford-streetlondon {
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        font-weight: 500;
+        }
+        .frame-travels,
+        .text-3 {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        }
+        .text-3 {
+        flex-direction: row;
+        padding: 0;
+        gap: 0 7.5px;
+        }
+        .frame-travels {
+        flex-direction: column;
+        padding: var(--padding-12xs) 0 0;
+        }
+        .iconscommunicatephone-call1 {
+        height: 20px;
+        width: 20px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        }
+        .icon2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        }
+        .div5 {
+        position: relative;
+        line-height: 140%;
+        text-transform: capitalize;
+        font-weight: 500;
+        white-space: nowrap;
+        }
+        .phone1 {
+        flex-direction: row;
+        align-items: flex-start;
+        }
+        .frame-footer2,
+        .phone1,
+        .text-4 {
+        display: flex;
+        justify-content: flex-start;
+        }
+        .text-4 {
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 0 8px;
+        }
+        .frame-footer2 {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: var(--padding-12xs) 0 0;
+        }
+        .frame-footer,
+        .under-the-footer-title {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        max-width: 100%;
+        }
+        .under-the-footer-title {
+        justify-content: flex-start;
+        gap: 0 26.75px;
+        }
+        .frame-footer {
+        align-self: stretch;
+        background-color: var(--neutral-300);
+        overflow: hidden;
+        justify-content: center;
+        padding: var(--padding-lgi) var(--padding-xl) var(--padding-4xl);
+        box-sizing: border-box;
+        font-size: var(--typography-desktop-caption-s-size);
+        color: var(--neutral-500);
+        }
+        .footerfinal,
+        .landing-page-hotel-search {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        }
+        .footerfinal {
+        align-self: stretch;
+        border-radius: var(--br-5xs) var(--br-5xs) 0 0;
+        align-items: flex-end;
+        padding: var(--padding-7xs) 0 0 0;
+        box-sizing: border-box;
+        max-width: 100%;
+        text-align: left;
+        font-size: var(--typography-desktop-h6-size);
+        color: var(--color-gray);
+        font-family: var(--typography-desktop-caption-s);
+        }
+        .landing-page-hotel-search {
+        width: 100%;
+        position: relative;
+        background-color: var(--neutral-100);
+        overflow: hidden;
+        align-items: flex-start;
+        letter-spacing: normal;
+        }
+        @media screen and (max-width: 1275px) {
+        .tabs {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .banner-hotel-search {
+            gap: 127px 0;
+        }
+        .navbar,
+        .q-r-codes {
+            flex: 1;
+        }
+        .special-offers-cards {
+            flex-wrap: wrap;
+        }
+        .footer-final {
+            padding-bottom: 372px;
+            box-sizing: border-box;
+        }
+        .photo-left,
+        .photo-right {
+            flex: 1;
+            min-height: auto;
+        }
+        .make-a-compoasion-cards {
+            flex-wrap: wrap;
+        }
+        .banner-newsletter {
+            padding-bottom: var(--padding-20xl);
+            box-sizing: border-box;
+        }
+        .easyset24-app-footer,
+        .footer-service-column,
+        .under-the-footer-title {
+            flex-wrap: wrap;
+        }
+        }
+        @media screen and (max-width: 1100px) {
+        .hotel-search-menue {
+            height: auto;
+            min-height: 393;
+        }
+        .navbar {
+            min-width: 100%;
+        }
+        .photo-2 {
+            min-height: auto;
+        }
+        .news-updates-btn {
+            flex-wrap: wrap;
+        }
+        .photo-5 {
+            min-height: auto;
+        }
+        .down {
+            flex-wrap: wrap;
+        }
+        .footer-final {
+            padding-bottom: 242px;
+            box-sizing: border-box;
+        }
+        .review-cards {
+            flex-wrap: wrap;
+        }
+        .photo-left,
+        .photo-right {
+            min-width: 100%;
+        }
+        .back-review-cards {
+            height: auto;
+            padding-top: var(--padding-20xl);
+            box-sizing: border-box;
+        }
+        .banner11,
+        .banner2 {
+            min-height: auto;
+        }
+        .banner1 {
+            flex-wrap: wrap;
+        }
+        .banner4 {
+            min-height: auto;
+        }
+        .auto-layout-the-whole-episode,
+        .banner3 {
+            flex-wrap: wrap;
+        }
+        }
+        @media screen and (max-width: 750px) {
+        .search {
+            gap: 0 35px;
+        }
+        .header1 {
+            gap: 20px 0;
+        }
+        .why-choose-us1 {
+            font-size: var(--typography-desktop-h3-size);
+            line-height: 45px;
+        }
+        .exclusive-hotel-search {
+            font-size: 51px;
+            line-height: 61px;
+        }
+        .text20 {
+            gap: 18px 0;
+        }
+        .banner-hotel-search {
+            gap: 64px 0;
+            padding-top: 83px;
+            box-sizing: border-box;
+        }
+        .askonline {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .navbar {
+            gap: 23px 0;
+        }
+        .q-r-codes {
+            min-width: 100%;
+        }
+        .special-offers-cards {
+            gap: 0 25px;
+            padding-top: var(--padding-19xl);
+            box-sizing: border-box;
+        }
+        .special-offers {
+            font-size: var(--font-size-7xl);
+            line-height: 36px;
+        }
+        .app-barcode-footer {
+            gap: 16px 0;
+        }
+        .header-bar {
+            gap: 24px 0;
+        }
+        .make-a-comprasion1 {
+            font-size: var(--font-size-7xl);
+            line-height: 36px;
+        }
+        .cards {
+            gap: 16px 0;
+        }
+        .back-review-cards {
+            gap: 43px 0;
+            padding-left: 65px;
+            padding-right: 43px;
+            box-sizing: border-box;
+        }
+        .banner11,
+        .banner2,
+        .banner31,
+        .banner4 {
+            min-width: 100%;
+        }
+        .banner-newsletter {
+            gap: 30px 0;
+            padding-bottom: var(--padding-6xl);
+            box-sizing: border-box;
+        }
+        .easyset24-app-footer {
+            padding-left: var(--padding-35xl);
+            padding-right: var(--padding-35xl);
+            box-sizing: border-box;
+        }
+        .footer {
+            gap: 20px 0;
+        }
+        }
+        @media screen and (max-width: 450px) {
+        .search {
+            gap: 0 17px;
+        }
+        .heading {
+            font-size: var(--font-size-lgi);
+            line-height: 27px;
+        }
+        .header {
+            padding-bottom: var(--padding-12xl);
+            box-sizing: border-box;
+        }
+        .why-choose-us1 {
+            font-size: var(--typography-desktop-h4-size);
+            line-height: 34px;
+        }
+        .exclusive-hotel-search {
+            font-size: 38px;
+            line-height: 46px;
+        }
+        .place-rules {
+            font-size: var(--font-size-lgi);
+            line-height: 27px;
+        }
+        .banner-hotel-search {
+            gap: 32px 0;
+        }
+        .special-flight-offers {
+            flex-wrap: wrap;
+        }
+        .special-offer-hotels1 {
+            height: 140px;
+        }
+        .special-flight-offers1,
+        .special-flight-offers2,
+        .special-flight-offers3 {
+            flex-wrap: wrap;
+        }
+        .special-offer-hotels7 {
+            height: 140px;
+        }
+        .special-flight-offers4 {
+            flex-wrap: wrap;
+        }
+        .input-email {
+            gap: 60px 0;
+        }
+        .special-offers {
+            font-size: var(--font-size-lgi);
+            line-height: 27px;
+        }
+        .photo-2 {
+            min-width: 100%;
+        }
+        .text28 {
+            flex-wrap: wrap;
+        }
+        .photo-5 {
+            min-width: 100%;
+        }
+        .footer-final {
+            padding-bottom: 157px;
+            box-sizing: border-box;
+        }
+        .make-a-comprasion1 {
+            font-size: var(--font-size-lgi);
+            line-height: 27px;
+        }
+        .make-a-compraion-text {
+            gap: 16px 0;
+        }
+        .back-review-cards {
+            gap: 22px 0;
+            padding-left: var(--padding-xl);
+            padding-top: var(--padding-6xl);
+            padding-right: var(--padding-xl);
+            box-sizing: border-box;
+        }
+        .reserve-your-hotel-container,
+        .subscribe-our-newsletter {
+            font-size: var(--font-size-lgi);
+            line-height: 27px;
+        }
+        .go-further-with {
+            font-size: var(--typography-desktop-h6-size);
+            line-height: 22px;
+        }
+        .easyset24-app-footer {
+            padding-left: var(--padding-xl);
+            padding-right: var(--padding-xl);
+            box-sizing: border-box;
+        }
+        .payment-methods,
+        .send-an-email {
+            flex-wrap: wrap;
+        }
+        .footer {
+            padding-top: var(--padding-12xl);
+            padding-bottom: var(--padding-12xl);
+            box-sizing: border-box;
+        }
+        }
+
+    </style>
+  </head>
+  <body>
+    <!-- Link to Page 2 -->
+    <a href="FinalPayment.html">Go to Page3</a>
+    
+    <div class="landing-page-hotel-search">
+      <section class="header">
+        <div class="hotel-search-menue">
+          <header class="hotel-search-header-withe-sea">
+            <div class="header-after-sign-in">
+              <div class="header1">
+                <div class="search">
+                  <div class="logo">
+                    <img
+                      class="customer-service-link"
+                      loading="lazy"
+                      alt=""
+                      src="./public/vector.svg"
+                    />
+
+                    <b class="easyset-24">EasySet 24</b>
+                  </div>
+                  <div class="search-input-in-footer">
+                    <img
+                      class="iconsbasesearch"
+                      alt=""
+                      src="./public/iconsbasesearch2.svg"
+                    />
+                  </div>
+                  <div class="icons">
+                    <div class="icons1">
+                      <div class="england">
+                        <img
+                          class="button-icon"
+                          alt=""
+                          src="./public/button1@2x.png"
+                        />
+                      </div>
+                      <div class="icon-buttons">
+                        <div class="button">
+                          <img
+                            class="iconsmoneydollar"
+                            alt=""
+                            src="./public/iconsmoneydollar.svg"
+                          />
+                        </div>
+                      </div>
+                      <div class="icon-buttons1">
+                        <div class="button1">
+                          <img
+                            class="iconscharacterhelp"
+                            alt=""
+                            src="./public/iconscharacterhelp1.svg"
+                          />
+                        </div>
+                      </div>
+                      <div class="icon-buttons2">
+                        <div class="button2">
+                          <img
+                            class="iconsbaselike"
+                            alt=""
+                            src="./public/iconsbaselike1.svg"
+                          />
+                        </div>
+                      </div>
+                      <div class="phone">
+                        <img
+                          class="iconscommunicatephone-call"
+                          loading="lazy"
+                          alt=""
+                          src="./public/iconscommunicatephonecall.svg"
+                        />
+                      </div>
+                    </div>
+                    <div class="anna-name">
+                      <img
+                        class="photo-icon"
+                        loading="lazy"
+                        alt=""
+                        src="./public/photo2@2x.png"
+                      />
+
+                      <div class="anna">
+                        <div class="your-account">Your Account</div>
+                        <div class="anna1">
+                          <div class="anna-carinna">Anna Carinna</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="chip-menu">
+                  <button class="chips-trip">
+                    <div class="auto-layout-icon">
+                      <div class="link-button">Trip</div>
+                    </div>
+                  </button>
+                  <button class="chips-deals">
+                    <div class="div">
+                      <div class="text">%Deals</div>
+                    </div>
+                  </button>
+                  <button class="chips-hotel">
+                    <div class="div1">
+                      <b class="text1">Hotel</b>
+                    </div>
+                  </button>
+                  <button class="chips-flight">
+                    <div class="div2">
+                      <div class="text2">Flight</div>
+                    </div>
+                  </button>
+                  <button class="chips-apartment">
+                    <div class="div3">
+                      <div class="text3">Apartment</div>
+                    </div>
+                  </button>
+                  <button class="chips-camper">
+                    <div class="div4">
+                      <div class="text4">Camper</div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </header>
+          <div class="search1">
+            <div class="text5">
+              <h3 class="heading">Where is your Next Dream Place?</h3>
+              <div class="find-exclusive-genius">
+                Find exclusive Genius rewards in every corner of the world!
+              </div>
+            </div>
+            <div class="hotel-search-menue-bar">
+              <div class="input">
+                <div class="text6">
+                  <b class="place">Place</b>
+                </div>
+                <div class="input1">
+                  <div class="text7">
+                    <img
+                      class="iconsbuildhotel"
+                      alt=""
+                      src="./public/iconsbuildhotel1.svg"
+                    />
+
+                    <input class="text8" placeholder="Gutenberg" type="text" />
+                  </div>
+                </div>
+                <div class="text9">
+                  <div class="information">Information</div>
+                </div>
+              </div>
+              <div class="input2">
+                <div class="text10">
+                  <b class="vip">VIP</b>
+                </div>
+                <div class="input3">
+                  <div class="text11">
+                    <img
+                      class="iconstravelstake-off"
+                      alt=""
+                      src="./public/iconstravelstakeoff.svg"
+                    />
+
+                    <div class="long-lasting">Long Lasting</div>
+                  </div>
+                  <img
+                    class="iconseditdrop-down-list"
+                    alt=""
+                    src="./public/iconseditdropdownlist2.svg"
+                  />
+                </div>
+              </div>
+              <div class="input4">
+                <div class="text12">
+                  <b class="passengers-room">Passengers - Room Condition</b>
+                </div>
+                <div class="input5">
+                  <div class="text13">
+                    <img
+                      class="iconspeoplespeople"
+                      loading="lazy"
+                      alt=""
+                      src="./public/iconspeoplespeople.svg"
+                    />
+
+                    <div class="adults-3">2 Adults - 3 Children</div>
+                  </div>
+                  <div class="text14">
+                    <div class="two-rooms">Two Rooms</div>
+                    <img
+                      class="iconseditdrop-down-list1"
+                      alt=""
+                      src="./public/iconseditdropdownlist2.svg"
+                    />
+                  </div>
+                </div>
+                <div class="text15">
+                  <div class="information1">Information</div>
+                </div>
+              </div>
+              <div class="input6">
+                <div class="text16">
+                  <b class="check-in-check">Check In -Check Out</b>
+                </div>
+                <button class="input7">
+                  <div class="text17">
+                    <img
+                      class="iconseditcalendar"
+                      alt=""
+                      src="./public/iconseditcalendar.svg"
+                    />
+
+                    <div class="dec-2023-">18 Dec 2023 - 23 Dec 2023</div>
+                  </div>
+                  <img
+                    class="iconstravelslanding"
+                    alt=""
+                    src="./public/iconstravelslanding.svg"
+                  />
+                </button>
+                <div class="text18">
+                  <div class="information2">Information</div>
+                </div>
+              </div>
+              <button class="search2">
+                <b class="search3">Search </b>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="banner-hotel-search">
+        <div class="auto-layout">
+          <div class="why-choose-us">
+            <h1 class="why-choose-us1">Why Choose Us?</h1>
+            <button class="button3">
+              <img
+                class="iconsarrowsright"
+                alt=""
+                src="./public/iconsarrowsright1.svg"
+              />
+
+              <div class="text19">
+                <div class="barcode-app-stores">Explore More</div>
+                <img
+                  class="iconsarrowsright-small"
+                  alt=""
+                  src="./public/iconsarrowsrightsmall.svg"
+                />
+              </div>
+            </button>
+          </div>
+        </div>
+        <div class="text20">
+          <div class="exclusive-hotel-search-wrapper">
+            <h1 class="exclusive-hotel-search">Exclusive Hotel Search!</h1>
+          </div>
+          <div class="tabs">
+            <button class="tab-review">
+              <div class="text21">
+                <b class="place-rules">Special offers</b>
+              </div>
+            </button>
+            <button class="tab-review1">
+              <b class="last-search">Last Search</b>
+            </button>
+            <button class="tab-review2">
+              <b class="trending-destinations">trending destinations</b>
+            </button>
+            <button class="tab-review3">
+              <b class="highest-reviewed">Highest Reviewed</b>
+            </button>
+            <button class="tab-review4">
+              <b class="highest-reviewed1">Highest Reviewed</b>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="footer-final">
+        <div class="header-bar">
+          <div class="special-offers-cards">
+            <div class="navbar">
+              <div class="search-bar">
+                <div class="special-offer-hotels">
+                  <div class="special-offer-hotels1">
+                    <div class="tag">
+                      <img
+                        class="customer-service-icon"
+                        alt=""
+                        src="./public/customer-service.svg"
+                      />
+
+                      <img
+                        class="headquarters-icon"
+                        alt=""
+                        src="./public/vector-10-1.svg"
+                      />
+
+                      <img
+                        class="subtract-icon"
+                        alt=""
+                        src="./public/subtract.svg"
+                      />
+
+                      <div class="special-offer">Best Deals</div>
+                    </div>
+                    <div class="special-flight-offers">
+                      <img
+                        class="image-1-icon"
+                        loading="lazy"
+                        alt=""
+                        src="./public/image-11@2x.png"
+                      />
+
+                      <div class="text-berlin">
+                        <div class="text22">
+                          <b class="berlin">Belgium</b>
+                          <div class="wed-25-jan-fri">
+                            Bruxelles Gare du Midi
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="askonline">
+                <div class="service">
+                  <div class="special-offer-hotels2">
+                    <div class="special-offer-hotels3">
+                      <div class="tag1">
+                        <img
+                          class="buttonconfirm-icon"
+                          alt=""
+                          src="./public/customer-service.svg"
+                        />
+
+                        <img
+                          class="frame-footer-icon"
+                          alt=""
+                          src="./public/vector-10-1.svg"
+                        />
+
+                        <img
+                          class="subtract-icon1"
+                          alt=""
+                          src="./public/subtract.svg"
+                        />
+
+                        <div class="special-offer1">Best Deals</div>
+                      </div>
+                      <div class="special-flight-offers1">
+                        <img
+                          class="image-1-icon1"
+                          loading="lazy"
+                          alt=""
+                          src="./public/image-1-1@2x.png"
+                        />
+
+                        <div class="text-berlin1">
+                          <div class="text23">
+                            <b class="berlin1">New Jersey</b>
+                            <div class="wed-25-jan-fri1">Windsor</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="special-offer-hotels4">
+                  <div class="special-offer-hotels5">
+                    <div class="tag2">
+                      <img
+                        class="balitravelguide-icon"
+                        alt=""
+                        src="./public/customer-service.svg"
+                      />
+
+                      <img
+                        class="auto-layout-activities"
+                        alt=""
+                        src="./public/vector-10-1.svg"
+                      />
+
+                      <img
+                        class="subtract-icon2"
+                        alt=""
+                        src="./public/subtract.svg"
+                      />
+
+                      <div class="special-offer2">Best Deals</div>
+                    </div>
+                    <div class="special-flight-offers2">
+                      <img
+                        class="image-1-icon2"
+                        loading="lazy"
+                        alt=""
+                        src="./public/image-1-2@2x.png"
+                      />
+
+                      <div class="text-berlin2">
+                        <div class="text24">
+                          <b class="berlin2">Nepal</b>
+                          <div class="wed-25-jan-fri2">Hyatt Regency K</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="q-r-codes">
+              <div class="input-email">
+                <div class="button-confirm">
+                  <div class="special-offer-hotels6">
+                    <div class="special-offer-hotels7">
+                      <div class="tag3">
+                        <img
+                          class="network-links-icon"
+                          alt=""
+                          src="./public/customer-service.svg"
+                        />
+
+                        <img
+                          class="email-info-icon"
+                          alt=""
+                          src="./public/vector-10-1.svg"
+                        />
+
+                        <img
+                          class="subtract-icon3"
+                          alt=""
+                          src="./public/subtract.svg"
+                        />
+
+                        <div class="special-offer3">Best Deals</div>
+                      </div>
+                      <div class="special-flight-offers3">
+                        <img
+                          class="image-1-icon3"
+                          loading="lazy"
+                          alt=""
+                          src="./public/image-1-3@2x.png"
+                        />
+
+                        <div class="text-berlin3">
+                          <div class="text25">
+                            <b class="berlin3">Amsterdam</b>
+                            <div class="wed-25-jan-fri3">Bunk</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="special-offer-hotels8">
+                  <div class="special-offer-hotels9">
+                    <div class="tag4">
+                      <img
+                        class="tag-child"
+                        alt=""
+                        src="./public/customer-service.svg"
+                      />
+
+                      <img
+                        class="tag-item"
+                        alt=""
+                        src="./public/vector-10-1.svg"
+                      />
+
+                      <img
+                        class="subtract-icon4"
+                        alt=""
+                        src="./public/subtract.svg"
+                      />
+
+                      <div class="special-offer4">Best Deals</div>
+                    </div>
+                    <div class="special-flight-offers4">
+                      <img
+                        class="image-1-icon4"
+                        loading="lazy"
+                        alt=""
+                        src="./public/image-1-4@2x.png"
+                      />
+
+                      <div class="text-berlin4">
+                        <div class="text26">
+                          <b class="berlin4">Gothenburg</b>
+                          <div class="wed-25-jan-fri4">First Hotel G</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="app-barcode-footer">
+            <h1 class="special-offers">Special offers</h1>
+            <div class="about-us-container">
+              <div class="news-updates-btn">
+                <div class="photo-1">
+                  <div class="button4">
+                    <img
+                      class="vuesaxoutlinearrow-down-icon"
+                      alt=""
+                      src="./public/vuesaxoutlinearrowdown31.svg"
+                    />
+
+                    <div class="deals-discover">Deals discover</div>
+                    <img
+                      class="iconsarrowsarrow-right"
+                      alt=""
+                      src="./public/iconsarrowsarrowright.svg"
+                    />
+                  </div>
+                  <button class="button5">
+                    <img
+                      class="vuesaxoutlinearrow-down-icon1"
+                      alt=""
+                      src="./public/vuesaxoutlinearrowdown31.svg"
+                    />
+
+                    <div class="loyalty-discounts">Loyalty Discounts</div>
+                    <div class="star-rating">
+                      <img
+                        class="iconsarrowsarrow-right1"
+                        alt=""
+                        src="./public/iconsarrowsarrowright-1.svg"
+                      />
+                    </div>
+                  </button>
+                </div>
+                <div class="photo-2">
+                  <button class="button6">
+                    <img
+                      class="vuesaxoutlinearrow-down-icon2"
+                      alt=""
+                      src="./public/vuesaxoutlinearrowdown31.svg"
+                    />
+
+                    <div class="early-booking-discounts">
+                      Early Booking Discounts
+                    </div>
+                    <div class="star-rating1">
+                      <img
+                        class="iconsarrowsarrow-right2"
+                        alt=""
+                        src="./public/iconsarrowsarrowright-1.svg"
+                      />
+                    </div>
+                  </button>
+                </div>
+                <div class="photo-3">
+                  <button class="button7">
+                    <img
+                      class="vuesaxoutlinearrow-down-icon3"
+                      alt=""
+                      src="./public/vuesaxoutlinearrowdown31.svg"
+                    />
+
+                    <div class="last-minute-deals">Last-Minute Deals</div>
+                    <div class="star-rating2">
+                      <img
+                        class="iconsarrowsarrow-right3"
+                        alt=""
+                        src="./public/iconsarrowsarrowright.svg"
+                      />
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div class="down">
+                <div class="photo-4">
+                  <button class="button8">
+                    <img
+                      class="vuesaxoutlinearrow-down-icon4"
+                      alt=""
+                      src="./public/vuesaxoutlinearrowdown31.svg"
+                    />
+
+                    <div class="text27">
+                      <div class="family-packages">Family Packages</div>
+                      <div class="star-rating3">
+                        <img
+                          class="iconsarrowsarrow-right4"
+                          alt=""
+                          src="./public/iconsarrowsarrowright-1.svg"
+                        />
+                      </div>
+                    </div>
+                  </button>
+                </div>
+                <div class="photo-5">
+                  <button class="button9">
+                    <img
+                      class="vuesaxoutlinearrow-down-icon5"
+                      alt=""
+                      src="./public/vuesaxoutlinearrowdown31.svg"
+                    />
+
+                    <div class="text28">
+                      <div class="birthday-or-anniversary">
+                        Birthday or Anniversary Specials
+                      </div>
+                      <div class="star-rating4">
+                        <img
+                          class="iconsarrowsarrow-right5"
+                          alt=""
+                          src="./public/iconsarrowsarrowright-1.svg"
+                        />
+                      </div>
+                    </div>
+                  </button>
+                </div>
+                <div class="photo-6">
+                  <button class="button10">
+                    <img
+                      class="vuesaxoutlinearrow-down-icon6"
+                      alt=""
+                      src="./public/vuesaxoutlinearrowdown31.svg"
+                    />
+
+                    <div class="text29">
+                      <div class="referral-programs">Referral Programs</div>
+                      <div class="star-rating5">
+                        <img
+                          class="iconsarrowsarrow-right6"
+                          alt=""
+                          src="./public/iconsarrowsarrowright.svg"
+                        />
+                      </div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="banner-newsletter">
+        <div class="make-a-comprasion">
+          <div class="cards">
+            <div class="make-a-compraion-text">
+              <h1 class="make-a-comprasion1">Make a Comprasion</h1>
+            </div>
+            <div class="make-a-compoasion-cards">
+              <div class="photo-left">
+                <b class="the-past-offers"
+                  >The past offers with the highest reviews outshine others,
+                  standing as a testament to their exceptional quality.</b
+                >
+              </div>
+              <div class="photo-right">
+                <b class="ring-in-the"
+                  >Ring in the new year with iconic moments and unforgettable
+                  memories in New York City</b
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="back-review-cards">
+          <div class="frame-link-social">
+            
+            <div class="review-cards">
+              <div class="component-1">
+                <div class="text30">
+                  <div class="text31">
+                    <div class="teacher">
+                      <div class="auto-layout-scan">
+                        <img
+                          class="icon-flag-icon-set-43-y"
+                          loading="lazy"
+                          alt=""
+                          src="./public/icon--flagiconset--43--yt.svg"
+                        />
+                      </div>
+                      <div class="teacher-terece">Teacher Terece</div>
+                    </div>
+                    
+                    <div class="text32">
+                      <div class="text33">
+                        <div class="returning-to-this-container">
+                          <p class="returning-to-this">
+                            Returning to this hotel is always a delight – their
+                            loyalty program showers us with exclusive discounts
+                            and amazing perks!
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <img
+                  class="photo-icon1"
+                  loading="lazy"
+                  alt=""
+                  src="./public/photo-11@2x.png"
+                />
+              </div>
+              <div class="component-2">
+                <div class="text34">
+                  <div class="text35">
+                    <div class="beyu">
+                      <div class="icon-flag-icon-set-43-n-wrapper">
+                        <img
+                          class="icon-flag-icon-set-43-n"
+                          loading="lazy"
+                          alt=""
+                          src="./public/icon--flagiconset--43--no.svg"
+                        />
+                      </div>
+                      <div class="beyu68">BEYU68£</div>
+                    </div>
+                    <div class="text36">
+                      <div class="text37">
+                        <div class="accessing-easyset24-extraordin">
+                          Accessing EasySet24 extraordinary special offers makes
+                          always our journey even more unforgettable.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <img
+                  class="photo-icon2"
+                  loading="lazy"
+                  alt=""
+                  src="./public/photo-21@2x.png"
+                />
+              </div>
+              <div class="component-3">
+                <div class="text38">
+                  <div class="text39">
+                    <div class="elina">
+                      <div class="icon-flag-icon-set-43-c-wrapper">
+                        <img
+                          class="icon-flag-icon-set-43-c"
+                          loading="lazy"
+                          alt=""
+                          src="./public/icon--flagiconset--43--ca.svg"
+                        />
+                      </div>
+                      <div class="elina13ay">Elina13ay</div>
+                    </div>
+                    <div class="text40">
+                      <div class="text41">
+                        <div class="weekends-here-are-container">
+                          <p class="weekends-here-are">
+                            Weekends here are pure bliss with their carefully
+                            crafted packages, and the extended stay discounts
+                            make relaxation even more enticing.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <img
+                  class="photo-icon3"
+                  loading="lazy"
+                  alt=""
+                  src="./public/photo-31@2x.png"
+                />
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="security-seal-node">
+          <div class="cards1">
+            <div class="banner1">
+              <div class="banner11">
+                <h3 class="reserve-your-hotel-container">
+                  <p class="blank-line">
+                    <a
+                      class="blank-line1"
+                      href="https://hotel.check24.de/reisewelt/fussball-em-2024"
+                      target="_blank"
+                      >&nbsp;</a
+                    >
+                  </p>
+                  <p class="reserve-your-hotel">
+                    Reserve Your hotel, Pursue Your Team
+                  </p>
+                </h3>
+              </div>
+              <button class="banner2">
+                <b class="subscribe-our-newsletter">Subscribe Our Newsletter</b>
+              </button>
+            </div>
+            <div class="banner3">
+              <textarea
+                class="banner31"
+                placeholder="
+Review Hotel Services Worldwide"
+                rows="{13}"
+                cols="{30}"
+              >
+              </textarea>
+              <div class="banner4">
+                <div class="follow-the-lates-container">
+                  <p class="blank-line2">
+                    <a
+                      class="blank-line3"
+                      href="https://hotel.check24.de/reisewelt/instagram-hotels-in-deutschland"
+                      target="_blank"
+                    >
+                      <span class="blank-line4">&nbsp;</span>
+                    </a>
+                  </p>
+                  <p class="follow-the-lates-tour-news">
+                    <b class="follow-the-lates">Follow the Lates Tour News</b>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="easyset24-app-footer">
+        <div class="auto-layout1">
+          <div class="travel-description-and-click-o">
+            <b class="go-further-with">Go Further With The EasySet24 App</b>
+          </div>
+          <div class="enjoy-savings-on">
+            Enjoy savings on chosen hotels and flights when you book through the
+            EasySet24 website. Additionally, earn One Key Cash for every booking
+            made through the app.
+          </div>
+          <div class="text42">
+            <div class="secured-by-europe">Secured By Europe GTP</div>
+          </div>
+        </div>
+        <div class="auto-layout-scane-barcode">
+          <div class="auto-layout-barcode-app-store">
+            <img
+              class="httpslottiefilescomanimat-icon"
+              loading="lazy"
+              alt=""
+              src="./public/httpslottiefilescomanimationsappledownloadu6sucjunlb@2x.png"
+            />
+
+            <img
+              class="qr-code-icon"
+              loading="lazy"
+              alt=""
+              src="./public/qr-code.svg"
+            />
+          </div>
+          <div class="auto-layout-barcode-google-pla">
+            <img
+              class="httpslottiefilescomanimat-icon1"
+              loading="lazy"
+              alt=""
+              src="./public/httpslottiefilescomanimationsgoogleplaybadgegeekcfr3j6@2x.png"
+            />
+
+            <img
+              class="qr-code-icon1"
+              loading="lazy"
+              alt=""
+              src="./public/qr-code-1.svg"
+            />
+          </div>
+        </div>
+      </section>
+      <footer class="footerfinal">
+        <div class="footer">
+          <div class="base"></div>
+          <div class="auto-layout-the-whole-episode">
+            <div class="auto-layout-about-us">
+              <b class="customer-service">About Us</b>
+              <div class="our-story">Our Story</div>
+              <div class="work-with-us">Work with us</div>
+              <div class="press-media">Press & media</div>
+              <div class="privacy-security">Privacy & Security</div>
+            </div>
+            <div class="auto-layout-we-offer">
+              <b class="we-offer">We Offer</b>
+              <div class="trip-sponsorship">Trip Sponsorship</div>
+              <div class="last-minutes-flights">Last Minutes Flights</div>
+              <div class="best-deals">Best Deals</div>
+              <div class="ai-driven-search">AI-Driven Search</div>
+            </div>
+            <div class="auto-layout-headquarters">
+              <b class="headquarters">Headquarters</b>
+              <div class="england1">England</div>
+              <div class="france">France</div>
+              <div class="canada">Canada</div>
+              <div class="iceland">Iceland</div>
+            </div>
+            <div class="auto-layout-travel-blogs">
+              <b class="travel-blogs">Travel Blogs</b>
+              <div class="bali-travel-guide">Bali Travel Guide</div>
+              <div class="sri-travel-guide">Sri Travel Guide</div>
+              <div class="peru-travel-guide">Peru Travel Guide</div>
+              <div class="swiss-travel-guide">Swiss Travel Guide</div>
+            </div>
+            <div class="auto-layout-activities1">
+              <b class="activities">Activities</b>
+              <div class="tour-leading">Tour Leading</div>
+              <div class="cruising-sailing">Cruising & sailing</div>
+              <div class="camping">Camping</div>
+              <div class="kayaking">Kayaking</div>
+            </div>
+            <div class="auto-layou-service">
+              <b class="service1">Service</b>
+              <div class="report-error">Report Error</div>
+              <div class="ask-online">Ask online</div>
+              <div class="travel-insurance">Travel insurance</div>
+            </div>
+          </div>
+          <div class="footer-service-column">
+            <div class="payment-methods">
+              <button class="visa-card">
+                <img
+                  class="visa-logo-icon"
+                  alt=""
+                  src="./public/visalogo.svg"
+                />
+              </button>
+              <img
+                class="amex-icon"
+                loading="lazy"
+                alt=""
+                src="./public/amex1@2x.png"
+              />
+
+              <div class="master-card">
+                <img
+                  class="internationalbankmasterrcard-icon"
+                  loading="lazy"
+                  alt=""
+                  src="./public/internationalbankmasterrcard@2x.png"
+                />
+              </div>
+              <div class="paypal">
+                <img
+                  class="international-icon"
+                  loading="lazy"
+                  alt=""
+                  src="./public/international1@2x.png"
+                />
+              </div>
+            </div>
+            <div class="send-email-frame">
+              <div class="social-networks">
+                <img
+                  class="linkedin-icon"
+                  loading="lazy"
+                  alt=""
+                  src="./public/-linkedin.svg"
+                />
+
+                <img
+                  class="telegram-icon"
+                  loading="lazy"
+                  alt=""
+                  src="./public/-telegram.svg"
+                />
+
+                <img class="twitter-icon" alt="" src="./public/-twitter.svg" />
+
+                <img class="facebook-icon" alt="" src="./public/facebook.svg" />
+
+                <img
+                  class="instagram-icon"
+                  alt=""
+                  src="./public/-instagram.svg"
+                />
+              </div>
+            </div>
+            <div class="send-an-email">
+              <div class="input8">
+                <div class="e-mail-text">
+                  <div class="title">Email</div>
+                </div>
+                <div class="auto-layout-input">
+                  <div class="text43">
+                    <img
+                      class="iconsofficemail"
+                      alt=""
+                      src="./public/iconsofficemail-1.svg"
+                    />
+
+                    <input
+                      class="enter-yout-email"
+                      placeholder="enter your email"
+                      type="text"
+                    />
+                  </div>
+                  <img
+                    class="iconsbasesearch1"
+                    alt=""
+                    src="./public/iconsbasesearch1.svg"
+                  />
+                </div>
+                <div class="sub-headings">
+                  <div class="information3">Information</div>
+                </div>
+              </div>
+              <div class="confirm-button">
+                <div class="button11">
+                  <img
+                    class="vuesaxoutlinearrow-down-icon7"
+                    alt=""
+                    src="./public/vuesaxoutlinearrowdown3.svg"
+                  />
+
+                  <button class="text44">
+                    <div class="icon-mail">Subscribe</div>
+                    <img
+                      class="vuesaxoutlinetick-square-icon"
+                      alt=""
+                      src="./public/vuesaxoutlineticksquare1.svg"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="frame-footer">
+          <div class="under-the-footer-title">
+            <div class="under-title-footer">
+              <div class="text-1">
+                <div class="icon">
+                  <img
+                    class="iconscharactercopyright"
+                    alt=""
+                    src="./public/iconscharactercopyright.svg"
+                  />
+                </div>
+                <div class="copyright-easyset24">Copyright EasySet24</div>
+              </div>
+            </div>
+            <div class="frame-footer1">
+              <div class="text-2">
+                <div class="icon1">
+                  <img
+                    class="iconsofficeemail-down"
+                    alt=""
+                    src="./public/iconsofficeemaildown.svg"
+                  />
+                </div>
+                <div class="frame-privacy">
+                  <div class="easyset24gmailcom">easyset24@gmail.com</div>
+                </div>
+              </div>
+            </div>
+            <b class="easyset24-seamless-journeys"
+              >"EasySet24: Seamless Journeys, Unrivalled Travel Wisdom!"</b
+            >
+            <div class="frame-travels">
+              <div class="text-3">
+                <img
+                  class="iconstravelslocal-two"
+                  alt=""
+                  src="./public/iconstravelslocaltwo-1.svg"
+                />
+
+                <div class="oxford-streetlondon">123 Oxford Street,London</div>
+              </div>
+            </div>
+            <div class="frame-footer2">
+              <div class="text-4">
+                <div class="icon2">
+                  <img
+                    class="iconscommunicatephone-call1"
+                    alt=""
+                    src="./public/iconscommunicatephonecall-1.svg"
+                  />
+                </div>
+                <div class="phone1">
+                  <div class="div5">+44 20 7123 4567</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
