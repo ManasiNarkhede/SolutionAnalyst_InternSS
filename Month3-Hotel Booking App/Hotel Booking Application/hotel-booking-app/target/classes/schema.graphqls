@@ -1,0 +1,38 @@
+# User type representing a user in the system
+type User {
+  id: ID!
+  username: String!
+  email: String!
+  role: String!
+  createdAt: String!
+  updatedAt: String
+}
+
+# Hotel type representing a hotel in the system
+type Hotel {
+  id: ID!
+  name: String!
+  location: String!
+  description: String!
+  rating: Float!
+  createdAt: String!
+  updatedAt: String
+}
+
+# Query type for fetching data
+type Query {
+  getUserById(id: ID!): User
+  getAllUsers: [User]
+  getHotelById(id: ID!): Hotel
+  getAllHotels: [Hotel]
+}
+
+# Mutation type for modifying data
+type Mutation {
+  createUser(username: String!, email: String!, role: String!): User
+  updateUser(id: ID!, username: String, email: String, role: String): User
+  deleteUser(id: ID!): Boolean
+  createHotel(name: String!, location: String!, description: String!, rating: Float!): Hotel
+  updateHotel(id: ID!, name: String, location: String, description: String, rating: Float): Hotel
+  deleteHotel(id: ID!): Boolean
+}
