@@ -8,7 +8,7 @@ npm start
 Drive link :
 <br>
 <br>
-Website links:
+Website links:<br>
 Hotel Information Page -https://easyset24-hotelinfopage.netlify.app/ <br>
 Landing Page -https://easyset24-landingpage.netlify.app/ <br>
 Final Payment page-https://easyset24-finalpayment.netlify.app/ <br>
