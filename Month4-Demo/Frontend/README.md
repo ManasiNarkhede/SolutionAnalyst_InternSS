@@ -4,8 +4,10 @@
 React command :
 npm start
 <br>
+<br>
 Drive link :
-
+<br>
+<br>
 Website links:
 Hotel Information Page -https://easyset24-hotelinfopage.netlify.app/ <br>
 Landing Page -https://easyset24-landingpage.netlify.app/ <br>
