@@ -1,0 +1,13 @@
+{
+  "name": "dummy-amazon-api",
+  "version": "1.0.0",
+  "description": "A dummy Amazon API with Intersection Observer and View Transitions",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+ 
+}
