@@ -12,14 +12,15 @@ Welcome to Sweet Tooth Cake Shop's website! This project showcases a simple, yet
 [SweetToothCakeShop](https://sweet-toothcakeshop.netlify.app/)
 ## LightHouse Reports:
 The website has been thoroughly tested using the Lighthouse tool for both mobile and desktop views. The following are the results for both devices:
+
 [Mobile](https://pagespeed.web.dev/analysis/https-sweet-toothcakeshop-netlify-app/ehbt6rxz6l?form_factor=mobile)
-1. **Performance**: 100
-2. **Accessibility**: 87
-3. **Best Practices**: 96
-4. **SEO**: 100
+- **Performance**: 100
+- **Accessibility**: 87
+- **Best Practices**: 96
+- **SEO**: 100
 
 [Desktop](https://pagespeed.web.dev/analysis/https-sweet-toothcakeshop-netlify-app/ehbt6rxz6l?form_factor=desktop)
-1. **Performance**: 100
-2. **Accessibility**: 93
-3. **Best Practices**: 100
-4. **SEO**: 100
+- **Performance**: 100
+- **Accessibility**: 93
+- **Best Practices**: 100
+- **SEO**: 100
