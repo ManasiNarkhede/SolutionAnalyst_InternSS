@@ -5,11 +5,11 @@ Welcome to Sweet Tooth Cake Shop's website! This project showcases a simple, yet
 ## Features
 
 - **Responsive Design**: Looks great on all devices.
-- **High-Quality Images**: Beautiful images to showcase our cakes.
+- **High-Quality Images**: Beautiful images to showcase cakes.
 - **Contact Form**: Simple form for customer inquiries.
 - **Interactive Elements**: JavaScript functionality for user interaction.
 
-[SweetToothCakeShop] (https://sweet-toothcakeshop.netlify.app/)
+[SweetToothCakeShop](https://sweet-toothcakeshop.netlify.app/)
 ## LightHouse Reports:
 The website has been thoroughly tested using the Lighthouse tool for both mobile and desktop views. The following are the results for both devices:
 [Mobile](https://pagespeed.web.dev/analysis/https-sweet-toothcakeshop-netlify-app/ehbt6rxz6l?form_factor=mobile)
